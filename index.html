@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charter — Observable agent work, from prompt to proof</title>
+  <meta name="description" content="Charter is a local-first desktop IDE for delegating real repository work to coding agents — without giving up visibility or control. Open source, MIT licensed.">
+  <link rel="canonical" href="https://charter.pages.dev/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Charter">
+  <meta property="og:title" content="Charter — Observable agent work, from prompt to proof">
+  <meta property="og:description" content="A local-first desktop IDE for delegating real repository work to coding agents — without giving up visibility or control.">
+  <meta property="og:url" content="https://charter.pages.dev/">
+  <meta property="og:image" content="https://charter.pages.dev/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#eceae5">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="wordmark" href="#top">Charter</a>
+    <nav class="nav-links" aria-label="Site">
+      <a href="#why">Why</a>
+      <a href="#tour">Tour</a>
+      <a href="#gates">Gates</a>
+      <a href="#security">Security</a>
+      <a href="#start">Get started</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="https://github.com/longyunfeigu/bullpen" rel="noopener">
+        <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span><span class="star-count" data-stars hidden></span>
+      </a>
+      <a class="btn btn-primary btn-sm" href="#start">Get started</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <p class="eyebrow reveal">
+      <span class="badge-dot" aria-hidden="true"></span>
+      Open source · MIT · Development preview
+    </p>
+    <h1 class="reveal">Observable agent work,<br>from prompt to proof.</h1>
+    <p class="hero-sub reveal">
+      Charter is a local-first desktop IDE for delegating real repository work to coding
+      agents — without giving up visibility or control.
+    </p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="#start">Get started</a>
+      <a class="btn btn-ghost" href="https://github.com/longyunfeigu/bullpen" rel="noopener">
+        <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        Star on GitHub
+      </a>
+    </div>
+    <p class="hero-note reveal">macOS &amp; Windows targets · Linux preview — <a href="#start">build from source</a> in about two minutes</p>
+
+    <figure class="hero-shot reveal">
+      <div class="window">
+        <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="assets/session-diff.png" width="1440" height="900" alt="A Charter Session: the agent conversation and work log on the left; changed files, an inline diff, and a passed verification check on the right; Request changes, Rollback, and Approve actions below." fetchpriority="high">
+      </div>
+      <figcaption>One Session keeps the conversation, evidence, code, verification, and decision in view.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="why" id="why">
+    <blockquote class="thesis reveal">
+      <p>Most coding-agent tools make the model easy to start.
+      Charter is built for everything that happens <em>after you press&nbsp;Enter</em> —
+      what the agent did, where it did it, whether the result works,
+      and whether you want to keep it.</p>
+    </blockquote>
+
+    <div class="equation reveal" role="img" aria-label="A Session equals project plus agent plus worktree plus conversation plus plan plus files plus terminals plus preview plus verification plus review.">
+      <span class="eq-lhs">Session</span>
+      <span class="eq-op">=</span>
+      <span class="eq-term">project</span><span class="eq-op">+</span>
+      <span class="eq-term">agent</span><span class="eq-op">+</span>
+      <span class="eq-term">worktree</span><span class="eq-op">+</span>
+      <span class="eq-term">conversation</span><span class="eq-op">+</span>
+      <span class="eq-term">plan</span><span class="eq-op">+</span>
+      <span class="eq-term">files</span><span class="eq-op">+</span>
+      <span class="eq-term">terminals</span><span class="eq-op">+</span>
+      <span class="eq-term">preview</span><span class="eq-op">+</span>
+      <span class="eq-term">verification</span><span class="eq-op">+</span>
+      <span class="eq-term hl">review</span>
+    </div>
+    <p class="equation-caption reveal">A Session is the complete unit of human–agent work. Nothing about the task lives anywhere else.</p>
+  </section>
+
+  <!-- ============ TOUR ============ -->
+  <section class="tour" id="tour">
+
+    <article class="tour-item">
+      <div class="tour-copy reveal">
+        <h2>One composer, every agent</h2>
+        <p>Start the managed <strong>Charter Agent</strong>, or run your installed
+        <strong>Claude Code</strong> and <strong>Codex</strong> CLIs natively — same Session
+        model, same review gate, no switching product shells.</p>
+        <p>Pick how much rope each task gets: <span class="mode">Read</span>,
+        <span class="mode">Approve</span>, <span class="mode">Auto</span>, or
+        <span class="mode mode-full">Full</span> — from read-only Q&amp;A to supervised autonomy.</p>
+      </div>
+      <figure class="tour-shot reveal">
+        <div class="window window-float">
+          <img src="assets/agent-picker.png" width="810" height="340" alt="Charter's composer with the agent picker open: Charter Agent, Claude Code, and Codex; permission modes Read, Approve, Auto, and Full below." loading="lazy">
+        </div>
+      </figure>
+    </article>
+
+    <article class="tour-item tour-flip">
+      <div class="tour-copy reveal">
+        <h2>Evidence beside the conversation</h2>
+        <p>While the agent runs, file writes, commands, diffs, previews, checks, and decisions
+        form one chronological ledger — with timestamps and diffstats, live.</p>
+        <p>No digging through a wall of chat. The work log <em>is</em> the interface, and a
+        finished Session can be replayed step by step later.</p>
+      </div>
+      <figure class="tour-shot reveal">
+        <div class="window">
+          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="assets/session-diff.png" width="1440" height="900" alt="The Session work log recording reads, writes with diffstats, a test run, and a passed verification — beside the inline diff it produced." loading="lazy">
+        </div>
+      </figure>
+    </article>
+
+    <article class="tour-item">
+      <div class="tour-copy reveal">
+        <h2>Proof before approval</h2>
+        <p>Agent “done” only means <strong>ready to review</strong>. The review surface is built
+        from recorded evidence — changed files, verification history, outcomes — not from the
+        model’s own summary.</p>
+        <p>Inspect a line-numbered diff. Run the recorded checks. Then request changes,
+        roll back, or approve — whole, by file, or by hunk.</p>
+      </div>
+      <figure class="tour-shot reveal">
+        <div class="window">
+          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img src="assets/session-review.png" width="1440" height="900" alt="Charter's review surface: outcome, changed files, a passed verification run, and Request changes, Rollback, and Approve actions." loading="lazy">
+        </div>
+      </figure>
+    </article>
+
+  </section>
+
+  <!-- ============ GATES ============ -->
+  <section class="gates" id="gates">
+    <header class="section-head reveal">
+      <h2>Autonomy you can undo</h2>
+      <p>Four gates stand between a prompt and your codebase. Each one leaves evidence.</p>
+    </header>
+
+    <ol class="gate-grid">
+      <li class="gate-card reveal">
+        <span class="gate-num" aria-hidden="true">01</span>
+        <h3>Plan</h3>
+        <p>The agent proposes steps, scope, and a verification approach before it writes.
+        You approve, edit, or reject.</p>
+      </li>
+      <li class="gate-card reveal">
+        <span class="gate-num" aria-hidden="true">02</span>
+        <h3>Permission</h3>
+        <p>Every tool call is policy-checked in one gateway. Risky operations ask first;
+        forbidden ones never run.</p>
+      </li>
+      <li class="gate-card reveal">
+        <span class="gate-num" aria-hidden="true">03</span>
+        <h3>Verification</h3>
+        <p>Recorded checks run against the actual worktree. Failures stay on the record —
+        a re-run never erases history.</p>
+      </li>
+      <li class="gate-card reveal">
+        <span class="gate-num" aria-hidden="true">04</span>
+        <h3>Review</h3>
+        <p>Completion parks at <em>Ready to review</em>, never auto-accepts. And rollback is
+        byte-exact — even after you accept.</p>
+      </li>
+    </ol>
+
+    <p class="gates-note reveal">Even the opt-in <span class="mode mode-full">Full</span> autonomy mode keeps the same gateway,
+    audit trail, and hard limits — verification failures drop back to review, and accepted work can still be rolled back.</p>
+  </section>
+
+  <!-- ============ PERMISSIONS ============ -->
+  <section class="perm" id="permissions">
+    <header class="section-head reveal">
+      <h2>Permission is a gradient, not a toggle</h2>
+      <p>Operations are classified by consequence. The dangerous end is not a warning dialog — it simply doesn’t run.</p>
+    </header>
+
+    <div class="perm-table reveal" role="table" aria-label="Permission levels">
+      <div class="perm-row" role="row">
+        <span class="perm-level" role="cell">R0</span>
+        <span class="perm-name" role="cell">Read</span>
+        <span class="perm-desc" role="cell">Read files, search, diagnostics, <code>git status</code></span>
+        <span class="perm-verdict ok" role="cell">Allowed</span>
+      </div>
+      <div class="perm-row" role="row">
+        <span class="perm-level" role="cell">R1</span>
+        <span class="perm-name" role="cell">Workspace write</span>
+        <span class="perm-desc" role="cell">Create or edit files inside the isolated worktree</span>
+        <span class="perm-verdict ask" role="cell">Ask, or per plan &amp; mode</span>
+      </div>
+      <div class="perm-row" role="row">
+        <span class="perm-level" role="cell">R2</span>
+        <span class="perm-name" role="cell">Local execution</span>
+        <span class="perm-desc" role="cell">Known local commands and verification checks</span>
+        <span class="perm-verdict ask" role="cell">Known checks run; unknown commands ask</span>
+      </div>
+      <div class="perm-row" role="row">
+        <span class="perm-level" role="cell">R3</span>
+        <span class="perm-name" role="cell">External / irreversible</span>
+        <span class="perm-desc" role="cell">Networked or consequential operations</span>
+        <span class="perm-verdict warn" role="cell">Explicit confirmation, every time</span>
+      </div>
+      <div class="perm-row perm-blocked" role="row">
+        <span class="perm-level" role="cell">R4</span>
+        <span class="perm-name" role="cell">Blocked</span>
+        <span class="perm-desc" role="cell"><code>sudo</code>, <code>git push</code>, secret reads, writes outside the workspace</span>
+        <span class="perm-verdict no" role="cell">Rejected by the product</span>
+      </div>
+    </div>
+    <p class="perm-note reveal">There is no “run anyway” button on R4.</p>
+  </section>
+
+  <!-- ============ SECURITY ============ -->
+  <section class="security" id="security">
+    <header class="section-head reveal">
+      <h2>The model never touches your files directly</h2>
+      <p>The model loop runs in an isolated process with no filesystem, shell, or secret access.
+      Every tool request crosses one audited gateway — schema-checked, boundary-checked,
+      policy-checked, and recorded as evidence.</p>
+    </header>
+
+    <ul class="sec-grid">
+      <li class="sec-card reveal">
+        <h3>Isolated by architecture</h3>
+        <p>Interface, sandboxed bridge, desktop host, and model process are separate trust
+        boundaries. Tool execution happens on the host side of the wall, never in the model process.</p>
+      </li>
+      <li class="sec-card reveal">
+        <h3>Reversible by default</h3>
+        <p>Changes are snapshotted before they happen and written atomically with revision checks.
+        Rollback restores files byte-exact and verifies every hash.</p>
+      </li>
+      <li class="sec-card reveal">
+        <h3>Keys stay in the keychain</h3>
+        <p>Provider credentials are encrypted with OS-backed storage and never reach the
+        interface — it only ever learns that a key <em>exists</em>.</p>
+      </li>
+      <li class="sec-card reveal">
+        <h3>Local-first, honestly</h3>
+        <p>Projects, task state, and evidence stay on your machine. Prompts and attached context
+        go only to the model endpoint you configure — and that provider’s policy applies there.</p>
+      </li>
+    </ul>
+
+    <p class="sec-note reveal">Application-level permissions are not an operating-system sandbox.
+    Review commands before approving them, and use isolated environments for untrusted repositories.</p>
+  </section>
+
+  <!-- ============ GET STARTED ============ -->
+  <section class="start" id="start">
+    <header class="section-head reveal">
+      <h2>Build it from source today</h2>
+      <p>Charter is a development preview: the desktop workflow is implemented and tested,
+      while installers, signing, and auto-update are still in progress. Building from source
+      is the supported way in.</p>
+    </header>
+
+    <div class="terminal reveal" aria-label="Installation commands">
+      <div class="terminal-bar"><i></i><i></i><i></i><span>terminal</span></div>
+      <pre><code><span class="t-c"># Node.js ≥ 22.19, npm, and Git</span>
+<span class="t-p">$</span> git clone https://github.com/longyunfeigu/bullpen.git
+<span class="t-p">$</span> cd bullpen &amp;&amp; npm install
+<span class="t-p">$</span> npm run dev</code></pre>
+      <button class="copy-btn" type="button" data-copy="git clone https://github.com/longyunfeigu/bullpen.git&#10;cd bullpen && npm install&#10;npm run dev">Copy</button>
+    </div>
+
+    <ol class="start-steps reveal">
+      <li><strong>Open a Git project.</strong> Charter works on real repositories, in isolated worktrees.</li>
+      <li><strong>Add a model provider.</strong> Settings → Models: Anthropic, OpenAI, OpenRouter, LiteLLM, or any compatible endpoint. Keys go to your OS keychain.</li>
+      <li><strong>Start a Session.</strong> Choose the agent and permission mode, describe the outcome you want — and read the evidence when it’s ready to review.</li>
+    </ol>
+
+    <p class="start-note reveal" data-release-note>
+      Want an installer instead? <a href="https://github.com/longyunfeigu/bullpen/releases" rel="noopener">Watch releases on GitHub</a> — packaged builds are the current milestone.
+    </p>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <h2 class="reveal">Questions, answered plainly</h2>
+    <div class="faq-list">
+      <details class="reveal">
+        <summary>Why is there no installer yet?</summary>
+        <p>Deliberate sequencing. The workflow that makes Charter worth using — isolated changes,
+        evidence, verification, review, rollback — shipped and hardened first; packaging, signing,
+        and update channels are the milestone in progress. The honest way to offer the product today
+        is <code>git clone</code>, so that’s the one on this page.</p>
+      </details>
+      <details class="reveal">
+        <summary>Where does my code go?</summary>
+        <p>Nowhere, by default. Projects, task state, and the evidence ledger live on your machine.
+        When an agent runs, your prompt and the context you attach are sent to the model endpoint
+        <em>you</em> configured — no other backend is involved, and analytics are off by default.</p>
+      </details>
+      <details class="reveal">
+        <summary>Which models and agents can I use?</summary>
+        <p>The managed Charter Agent works with Anthropic, OpenAI, OpenRouter, and LiteLLM presets,
+        plus custom Anthropic- or OpenAI-compatible endpoints. Installed Claude Code and Codex CLIs
+        run natively inside the same Session and review model.</p>
+      </details>
+      <details class="reveal">
+        <summary>How is this different from an AI-first IDE?</summary>
+        <p>Charter doesn’t compete on making the model type faster. It competes on what happens
+        after: isolated worktrees, a recorded ledger of every action, verification you can re-run,
+        a review gate that never auto-accepts, and rollback that still works after you accept.
+        If you like your agent, keep it — Claude Code and Codex run inside Charter.</p>
+      </details>
+      <details class="reveal">
+        <summary>Is it really open source?</summary>
+        <p>MIT licensed, developed in public — including the product specification, architecture
+        decision records, and implementation status. If a claim on this page isn’t backed by the
+        repository, file an issue.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="outro">
+    <h2 class="reveal">Charter your agent.</h2>
+    <p class="reveal">Give the work a charter — goal, boundaries, proof — and keep the final say.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="#start">Get started</a>
+      <a class="btn btn-ghost" href="https://github.com/longyunfeigu/bullpen" rel="noopener">View on GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark">Charter</span>
+      <p>Observable agent work, from prompt to proof.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/longyunfeigu/bullpen" rel="noopener">GitHub</a>
+        <a href="https://github.com/longyunfeigu/bullpen/releases" rel="noopener">Releases</a>
+        <a href="https://github.com/longyunfeigu/bullpen/issues" rel="noopener">Issues</a>
+      </div>
+      <div>
+        <h4>Docs</h4>
+        <a href="https://github.com/longyunfeigu/bullpen#readme" rel="noopener">README</a>
+        <a href="https://github.com/longyunfeigu/bullpen/blob/main/README.zh-CN.md" rel="noopener">简体中文</a>
+        <a href="https://github.com/longyunfeigu/bullpen/tree/main/docs" rel="noopener">Spec &amp; ADRs</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="https://github.com/longyunfeigu/bullpen/blob/main/LICENSE" rel="noopener">MIT License</a>
+      </div>
+    </nav>
+  </div>
+  <p class="footer-fine">© 2026 Charter contributors. Made for people who read the diff.</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
