@@ -2,26 +2,27 @@
 
 The public landing page for [Charter](https://github.com/longyunfeigu/bullpen) — a local-first desktop IDE for delegating real repository work to coding agents without giving up visibility or control.
 
-Plain HTML/CSS/JS. No build step, no framework, no backend. The deploy artifact is this directory as-is.
+Plain HTML/CSS/JS. No build step, no framework, no backend. **The deploy artifact is the `public/` directory** — repo-root files (this README, DEPLOY.md, CLAUDE.md) are development material and are not published.
 
 ## Local preview
 
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8080 -d public
 # open http://localhost:8080
 ```
 
-(Any static file server works. Opening `index.html` directly also works, but the GitHub API version lookup needs http(s) in some browsers.)
+(Any static file server works. Opening `public/index.html` directly also works, but the GitHub API lookups need http(s) in some browsers.)
 
 ## Layout
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | The entire page |
-| `styles.css` | All styles; design tokens as CSS variables at the top |
-| `script.js` | Progressive enhancement: OS detection for the quick-start hint, GitHub stars/release lookup with graceful fallback, scroll reveals |
-| `assets/` | Product screenshots, favicon, social card |
+| `public/index.html` | The entire page |
+| `public/styles.css` | All styles; design tokens as CSS variables at the top |
+| `public/script.js` | Progressive enhancement: GitHub stars/release lookup with graceful fallback, scroll reveals, CTA keyboard shortcuts |
+| `public/assets/` | Product screenshots, favicon, social card |
 | `DEPLOY.md` | How to publish (GitHub repo + Cloudflare Pages) |
+| `CLAUDE.md` | Brand and content rules for agents working here |
 
 Product screenshots are real application captures, reproducible from the product repo:
 
