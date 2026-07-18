@@ -20,6 +20,21 @@
     reveals.forEach((el) => el.classList.add('in'));
   }
 
+  /* ---- keyboard shortcuts on hero CTAs (G / S) ---- */
+  document.addEventListener('keydown', (e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(input|textarea|select)$/i.test(t.tagName))) return;
+    const el = document.querySelector(`[data-key="${e.key.toLowerCase()}"]`);
+    if (!el) return;
+    e.preventDefault();
+    if (el.getAttribute('href')?.startsWith('#')) {
+      document.querySelector(el.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.open(el.href, '_blank', 'noopener');
+    }
+  });
+
   /* ---- copy button ---- */
   document.querySelectorAll('.copy-btn').forEach((btn) => {
     btn.addEventListener('click', async () => {

@@ -56,17 +56,16 @@
       agents — without giving up visibility or control.
     </p>
     <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="#start">Get started</a>
-      <a class="btn btn-ghost" href="https://github.com/longyunfeigu/bullpen" rel="noopener">
+      <a class="btn btn-primary" href="#start" data-key="g">Get started <kbd>G</kbd></a>
+      <a class="btn btn-ghost" href="https://github.com/longyunfeigu/bullpen" rel="noopener" data-key="s">
         <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        Star on GitHub
+        Star on GitHub <kbd>S</kbd>
       </a>
     </div>
     <p class="hero-note reveal">macOS &amp; Windows targets · Linux preview — <a href="#start">build from source</a> in about two minutes</p>
 
     <figure class="hero-shot reveal">
       <div class="window">
-        <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
         <img src="assets/session-diff.png" width="1440" height="900" alt="A Charter Session: the agent conversation and work log on the left; changed files, an inline diff, and a passed verification check on the right; Request changes, Rollback, and Approve actions below." fetchpriority="high">
       </div>
       <figcaption>One Session keeps the conversation, evidence, code, verification, and decision in view.</figcaption>
@@ -102,9 +101,16 @@
   <!-- ============ TOUR ============ -->
   <section class="tour" id="tour">
 
+    <header class="section-head tour-head reveal">
+      <h2>One delegation, three moments</h2>
+      <p>Every screen below is the real application working one Session:
+      choose the hands, watch the work, judge the result.</p>
+    </header>
+
     <article class="tour-item">
       <div class="tour-copy reveal">
-        <h2>One composer, every agent</h2>
+        <p class="tour-kicker">01 · Delegate</p>
+        <h3>One composer, every agent</h3>
         <p>Start the managed <strong>Charter Agent</strong>, or run your installed
         <strong>Claude Code</strong> and <strong>Codex</strong> CLIs natively — same Session
         model, same review gate, no switching product shells.</p>
@@ -121,7 +127,8 @@
 
     <article class="tour-item tour-flip">
       <div class="tour-copy reveal">
-        <h2>Evidence beside the conversation</h2>
+        <p class="tour-kicker">02 · Observe</p>
+        <h3>Evidence beside the conversation</h3>
         <p>While the agent runs, file writes, commands, diffs, previews, checks, and decisions
         form one chronological ledger — with timestamps and diffstats, live.</p>
         <p>No digging through a wall of chat. The work log <em>is</em> the interface, and a
@@ -129,7 +136,6 @@
       </div>
       <figure class="tour-shot reveal">
         <div class="window">
-          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
           <img src="assets/session-diff.png" width="1440" height="900" alt="The Session work log recording reads, writes with diffstats, a test run, and a passed verification — beside the inline diff it produced." loading="lazy">
         </div>
       </figure>
@@ -137,7 +143,8 @@
 
     <article class="tour-item">
       <div class="tour-copy reveal">
-        <h2>Proof before approval</h2>
+        <p class="tour-kicker">03 · Decide</p>
+        <h3>Proof before approval</h3>
         <p>Agent “done” only means <strong>ready to review</strong>. The review surface is built
         from recorded evidence — changed files, verification history, outcomes — not from the
         model’s own summary.</p>
@@ -146,7 +153,6 @@
       </div>
       <figure class="tour-shot reveal">
         <div class="window">
-          <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i></div>
           <img src="assets/session-review.png" width="1440" height="900" alt="Charter's review surface: outcome, changed files, a passed verification run, and Request changes, Rollback, and Approve actions." loading="lazy">
         </div>
       </figure>
@@ -334,6 +340,12 @@
         <p>MIT licensed, developed in public — including the product specification, architecture
         decision records, and implementation status. If a claim on this page isn’t backed by the
         repository, file an issue.</p>
+      </details>
+      <details class="reveal">
+        <summary>Who builds Charter?</summary>
+        <p>Mostly coding agents — working the way this page describes, against a public
+        specification, with plans, verification, and review on every change. The gates exist
+        because Charter’s own development depends on them.</p>
       </details>
     </div>
   </section>
