@@ -121,7 +121,7 @@
       </div>
       <figure class="tour-shot reveal">
         <div class="window window-float">
-          <img src="assets/agent-picker.png" width="810" height="340" alt="Charter's composer with the agent picker open: Charter Agent, Claude Code, and Codex; permission modes Read, Approve, Auto, and Full below." loading="lazy">
+          <img src="assets/agent-picker.png" width="810" height="340" alt="Charter's composer with the agent picker open: Charter Agent, Claude Code, and Codex; permission modes Read, Approve, Auto, and Full below.">
         </div>
       </figure>
     </article>
@@ -137,7 +137,7 @@
       </div>
       <figure class="tour-shot reveal">
         <div class="window">
-          <img src="assets/session-diff.png" width="1440" height="900" alt="The Session work log recording reads, writes with diffstats, a test run, and a passed verification — beside the inline diff it produced." loading="lazy">
+          <img src="assets/session-diff.png" width="1440" height="900" alt="The Session work log recording reads, writes with diffstats, a test run, and a passed verification — beside the inline diff it produced.">
         </div>
       </figure>
     </article>
@@ -154,7 +154,7 @@
       </div>
       <figure class="tour-shot reveal">
         <div class="window">
-          <img src="assets/session-review.png" width="1440" height="900" alt="Charter's review surface: outcome, changed files, a passed verification run, and Request changes, Rollback, and Approve actions." loading="lazy">
+          <img src="assets/session-review.png" width="1440" height="900" alt="Charter's review surface: outcome, changed files, a passed verification run, and Request changes, Rollback, and Approve actions.">
         </div>
       </figure>
     </article>
@@ -285,26 +285,62 @@
       Charter is a working IDE, not a chat window with a file tree.</p>
     </header>
 
+    <ul class="ide-grid ide-grid-featured">
+      <li class="ide-card ide-card-shot reveal">
+        <figure><img src="assets/features/notice.png" width="540" height="338" alt="A completion notice in the top corner: green tone bar, 'Ready for review — Harden checkout retries, 3 files changed', beside the review panel."></figure>
+        <div class="ide-card-body">
+          <h3>Completion notices</h3>
+          <p>When any Session finishes, a toned notice slides in — success green, review amber,
+          failure red — and the Session pulses in the rail until you open it.</p>
+        </div>
+      </li>
+      <li class="ide-card ide-card-shot reveal">
+        <figure><img src="assets/features/presence.png" width="500" height="313" alt="The live board during a run: 'THIS SESSION — LIVE', 8 writes/min, two file tiles marked 'writing' with activity bars."></figure>
+        <div class="ide-card-body">
+          <h3>Live presence</h3>
+          <p>File tiles ripple as the agent writes. A breathing indicator shows exactly where
+          work is happening, the moment it happens.</p>
+        </div>
+      </li>
+      <li class="ide-card ide-card-shot reveal">
+        <figure><img src="assets/features/terminal.png" width="860" height="538" alt="A real zsh terminal inside Charter running npm test, with the live PTY badge and the passing test output."></figure>
+        <div class="ide-card-body">
+          <h3>Real terminals</h3>
+          <p>Persistent PTYs with a block model that understands commands — and tells you
+          when a long one finishes. PTYs stay alive while you switch Sessions.</p>
+        </div>
+      </li>
+      <li class="ide-card ide-card-shot reveal">
+        <figure><img src="assets/features/replay.png" width="1440" height="900" alt="Session replay: a semantic timeline with request, method, decision, change, and result stops, a scrubber with playback controls, and the recorded final report."></figure>
+        <div class="ide-card-body">
+          <h3>Session replay</h3>
+          <p>Scrub a finished Session step by step and watch every change land —
+          read-only, without touching your worktree.</p>
+        </div>
+      </li>
+      <li class="ide-card ide-card-shot reveal">
+        <figure><img src="assets/features/skills.png" width="690" height="431" alt="The composer with the slash-skill picker open: three managed skills with descriptions, keyboard hints to select and insert."></figure>
+        <div class="ide-card-body">
+          <h3>Skills</h3>
+          <p>A managed skill library for repeatable workflows, summoned with
+          <code>/</code> right in the composer.</p>
+        </div>
+      </li>
+      <li class="ide-card ide-card-shot reveal">
+        <figure><img src="assets/features/skins.png" width="1100" height="690" alt="The same home surface in Charter's four skins: warm Studio, phosphor-green Terminal, Archive, and Index."></figure>
+        <div class="ide-card-body">
+          <h3>Yours to tune</h3>
+          <p>Four coordinated skins in light and dark, a command palette, a quick launcher —
+          and analytics that are off by default.</p>
+        </div>
+      </li>
+    </ul>
+
     <ul class="ide-grid">
-      <li class="ide-card reveal">
-        <h3>Completion notices</h3>
-        <p>When any Session finishes, a toned notice slides in — success green, review amber,
-        failure red — and the Session pulses in the rail until you open it.</p>
-      </li>
-      <li class="ide-card reveal">
-        <h3>Live presence</h3>
-        <p>File tiles ripple as the agent writes. A breathing indicator shows exactly where
-        work is happening, the moment it happens.</p>
-      </li>
       <li class="ide-card reveal">
         <h3>A real editor</h3>
         <p>Monaco with split views, find &amp; replace, and graceful large-file handling.
         Your cursor stays put while the agent edits beside you.</p>
-      </li>
-      <li class="ide-card reveal">
-        <h3>Real terminals</h3>
-        <p>Persistent PTYs with a block model that understands commands — and tells you
-        when a long one finishes.</p>
       </li>
       <li class="ide-card reveal">
         <h3>Git, built in</h3>
@@ -327,24 +363,9 @@
         feedback by pointing at elements.</p>
       </li>
       <li class="ide-card reveal">
-        <h3>Session replay</h3>
-        <p>Scrub a finished Session step by step and watch every change land —
-        read-only, without touching your worktree.</p>
-      </li>
-      <li class="ide-card reveal">
         <h3>Steer mid-flight</h3>
         <p>Redirect a running agent, queue follow-ups, or stop instantly —
         and a stop is never dressed up as success.</p>
-      </li>
-      <li class="ide-card reveal">
-        <h3>Skills</h3>
-        <p>A managed skill library for repeatable workflows, summoned with
-        <code>/</code> right in the composer.</p>
-      </li>
-      <li class="ide-card reveal">
-        <h3>Yours to tune</h3>
-        <p>Four coordinated skins in light and dark, a command palette, a quick launcher —
-        and analytics that are off by default.</p>
       </li>
     </ul>
   </section>
