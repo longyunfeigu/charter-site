@@ -39,6 +39,23 @@
 
   --w-content: 1104px;
   --w-text: 720px;
+
+  /* easing library (Linear-style) — micro-interactions use .16s + ease-out-quad */
+  --ease-out-quad: cubic-bezier(.25, .46, .45, .94);
+  --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+  --ease-out-expo: cubic-bezier(.19, 1, .22, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-rise: cubic-bezier(.16, 1, .3, 1);
+
+  /* layered physical shadow for the hero stage */
+  --shadow-stage:
+    0 0 0 1px rgba(30, 26, 18, .07),
+    0 2.8px 2.2px rgba(30, 26, 18, .03),
+    0 6.7px 5.3px rgba(30, 26, 18, .042),
+    0 12.5px 10px rgba(30, 26, 18, .05),
+    0 22.3px 17.9px rgba(30, 26, 18, .06),
+    0 41.8px 33.4px rgba(30, 26, 18, .07),
+    0 100px 80px rgba(30, 26, 18, .1);
 }
 
 /* ---------- base ---------- */
@@ -120,8 +137,11 @@ section { scroll-margin-top: 76px; }
   border: 1px solid transparent;
   text-decoration: none;
   cursor: pointer;
-  transition: background .15s ease, border-color .15s ease, transform .15s ease;
+  transition: background .16s var(--ease-out-quad), border-color .16s var(--ease-out-quad),
+    transform .15s var(--ease-spring);
 }
+
+.btn:active { transform: scale(.97); }
 
 .btn-primary {
   background: var(--accent);
@@ -181,7 +201,10 @@ section { scroll-margin-top: 76px; }
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
+  transition: box-shadow .3s var(--ease-out-quad);
 }
+
+.nav.scrolled { box-shadow: 0 1px 2px rgba(30, 26, 18, .04), 0 8px 24px rgba(30, 26, 18, .06); }
 
 .nav-inner {
   max-width: var(--w-content);
@@ -224,10 +247,87 @@ section { scroll-margin-top: 76px; }
 /* ---------- hero ---------- */
 
 .hero {
-  max-width: var(--w-content);
-  margin: 0 auto;
+  position: relative;
   padding: 92px 24px 40px;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: var(--w-content);
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* drifting warm light pools — bottom-weighted, resolving back to paper at the top */
+.hero-glow {
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(60px);
+  will-change: transform;
+  background:
+    radial-gradient(36% 42% at 24% 74%, rgba(203, 131, 102, .30) 0, transparent 60%),
+    radial-gradient(40% 46% at 76% 66%, rgba(138, 154, 132, .26) 0, transparent 62%),
+    radial-gradient(34% 40% at 55% 88%, rgba(176, 111, 16, .16) 0, transparent 60%);
+  mix-blend-mode: multiply;
+  animation: flow-a 26s ease-in-out infinite alternate;
+  /* light pools live in the lower half; the top resolves back to paper */
+  mask-image: linear-gradient(to bottom, transparent 6%, black 56%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 6%, black 56%);
+}
+
+.hero-glow-b {
+  background:
+    radial-gradient(38% 44% at 64% 82%, rgba(216, 180, 140, .26) 0, transparent 60%),
+    radial-gradient(32% 40% at 32% 60%, rgba(122, 132, 168, .13) 0, transparent 62%);
+  animation: flow-b 34s ease-in-out infinite alternate;
+}
+
+@keyframes flow-a {
+  0%   { transform: translate3d(-4%, -2%, 0) scale(1.05) rotate(0deg); }
+  100% { transform: translate3d(5%, 3%, 0) scale(1.15) rotate(8deg); }
+}
+
+@keyframes flow-b {
+  0%   { transform: translate3d(3%, 2%, 0) scale(1.1) rotate(0deg); }
+  100% { transform: translate3d(-4%, -3%, 0) scale(1.02) rotate(-6deg); }
+}
+
+/* paper grain + dot lattice, fading out towards the fold */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(rgba(40, 36, 30, .07) 0 1px, transparent 1px) 50% 0 / 8px 8px,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E") repeat;
+  background-blend-mode: normal, multiply;
+  opacity: .35;
+  mask-image: linear-gradient(to bottom, black 0, transparent 72%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0, transparent 72%);
+}
+
+/* hero entrance: staggered rise (JS-gated) */
+html.js .hero-inner > .reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: rise .9s var(--ease-rise) both;
+}
+html.js .hero-inner > .eyebrow { animation-delay: .05s; }
+html.js .hero-inner > h1 { animation-delay: .14s; }
+html.js .hero-inner > .hero-sub { animation-delay: .26s; }
+html.js .hero-inner > .hero-cta { animation-delay: .36s; }
+html.js .hero-inner > .hero-note { animation-delay: .44s; }
+html.js .hero-inner > .hero-stage { animation-delay: .5s; animation-duration: 1.2s; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px) scale(.995); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .eyebrow {
@@ -286,13 +386,91 @@ section { scroll-margin-top: 76px; }
 }
 .hero-note a { color: var(--fg-muted); }
 
-.hero-shot {
-  margin: 64px auto 0;
+/* ---------- hero stage: one delegation, four acts ---------- */
+
+.hero-stage {
+  margin: 60px auto 0;
   max-width: 1010px;
 }
 
-.hero-shot figcaption {
-  margin-top: 18px;
+.stage-frame {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--bg-panel);
+  box-shadow: var(--shadow-stage);
+}
+
+.stage-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .7s var(--ease-out-quart);
+}
+
+.stage-frame img.is-active { opacity: 1; }
+/* no-JS fallback: show the final act */
+html:not(.js) .stage-frame img:last-of-type { opacity: 1; }
+
+.stage-rail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.stage-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  background: none;
+  padding: 6px 2px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  transition: color .16s var(--ease-out-quad);
+}
+
+.stage-step:hover { color: var(--fg-muted); }
+.stage-step.is-active { color: var(--fg); }
+
+.stage-meter {
+  width: 26px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--border-strong);
+  overflow: hidden;
+  flex: none;
+}
+
+.stage-meter::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background: var(--warning);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.stage-step.is-active .stage-meter::before {
+  animation: meter var(--stage-ms, 3600ms) linear forwards;
+}
+
+@keyframes meter { to { transform: scaleX(1); } }
+
+.hero-stage figcaption {
+  margin-top: 16px;
   font-size: 13.5px;
   color: var(--fg-faint);
 }
@@ -308,6 +486,45 @@ section { scroll-margin-top: 76px; }
 }
 
 .window-float { box-shadow: var(--shadow-card); }
+
+/* ---------- keyword marquee ---------- */
+
+.marquee {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-panel);
+  padding: 14px 0;
+  overflow: hidden;
+  display: flex;
+  gap: 44px;
+  mask-image: linear-gradient(to right, transparent 0, black 72px, black calc(100% - 72px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 72px, black calc(100% - 72px), transparent 100%);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 44px;
+  flex: none;
+  align-items: center;
+  animation: marquee 42s linear infinite;
+}
+
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+@keyframes marquee { to { transform: translateX(calc(-100% - 44px)); } }
+
+.marquee-track span {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: .06em;
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
+
+.marquee-track i {
+  font-style: normal;
+  color: color-mix(in srgb, var(--warning) 80%, var(--fg-faint));
+}
 
 /* ---------- why / thesis ---------- */
 
@@ -962,7 +1179,8 @@ section { scroll-margin-top: 76px; }
 html.js .reveal {
   opacity: 0;
   transform: translateY(14px);
-  transition: opacity .6s ease, transform .6s ease;
+  transition: opacity .7s var(--ease-out-quart), transform .7s var(--ease-out-quart);
+  transition-delay: calc(var(--i, 0) * 70ms);
 }
 
 html.js .reveal.in {
@@ -970,10 +1188,38 @@ html.js .reveal.in {
   transform: none;
 }
 
+/* hero children animate via the rise keyframes instead */
+html.js .hero-inner > .reveal { transition: none; }
+
+/* cursor spotlight border (Linear-style): a masked bright border follows the pointer */
+.spot { position: relative; }
+
+.spot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid color-mix(in srgb, var(--warning) 65%, var(--border-strong));
+  opacity: 0;
+  transition: opacity .3s var(--ease-out-quad);
+  pointer-events: none;
+  mask-image: radial-gradient(180px 180px at var(--mx, 50%) var(--my, 50%),
+    black 0%, rgba(0, 0, 0, .35) 45%, transparent 70%);
+  -webkit-mask-image: radial-gradient(180px 180px at var(--mx, 50%) var(--my, 50%),
+    black 0%, rgba(0, 0, 0, .35) 45%, transparent 70%);
+}
+
+.spot:hover::after { opacity: 1; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   html.js .reveal { opacity: 1; transform: none; transition: none; }
   .badge-dot { animation: none; }
+  .hero-glow, .hero-glow-b { animation: none; }
+  html.js .hero-inner > .reveal { animation: none; opacity: 1; transform: none; }
+  .marquee-track { animation: none; }
+  .stage-frame img { transition: none; }
+  .stage-step.is-active .stage-meter::before { animation: none; transform: scaleX(1); }
 }
 
 /* ---------- responsive ---------- */

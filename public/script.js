@@ -4,7 +4,12 @@
 
   const REPO = 'longyunfeigu/bullpen';
 
-  /* ---- scroll reveals ---- */
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- scroll reveals (staggered inside grids) ---- */
+  document.querySelectorAll('.gate-grid, .ide-grid, .sec-grid, .faq-list').forEach((grid) => {
+    [...grid.children].forEach((el, i) => el.style.setProperty('--i', String(i % 6)));
+  });
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && reveals.length) {
     const io = new IntersectionObserver((entries) => {
@@ -18,6 +23,73 @@
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add('in'));
+  }
+
+  /* ---- hero stage carousel: one delegation, four acts ---- */
+  const stage = document.querySelector('.hero-stage');
+  if (stage) {
+    const frames = [...stage.querySelectorAll('.stage-frame img')];
+    const steps = [...stage.querySelectorAll('.stage-step')];
+    const ms = Number(stage.dataset.stageMs) || 3600;
+    stage.style.setProperty('--stage-ms', `${ms}ms`);
+    let idx = 0;
+    let timer = null;
+
+    const show = (n) => {
+      idx = (n + frames.length) % frames.length;
+      frames.forEach((f, i) => f.classList.toggle('is-active', i === idx));
+      steps.forEach((s, i) => {
+        s.classList.toggle('is-active', i === idx);
+        s.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+        // restart the meter animation on the active step
+        if (i === idx) {
+          const m = s.querySelector('.stage-meter');
+          if (m) { m.style.display = 'none'; void m.offsetWidth; m.style.display = ''; }
+        }
+      });
+    };
+
+    const play = () => { if (!timer && !reducedMotion) timer = setInterval(() => show(idx + 1), ms); };
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+    steps.forEach((s, i) => s.addEventListener('click', () => { stop(); show(i); play(); }));
+
+    if (reducedMotion) {
+      show(frames.length - 1); // rest on the review act
+    } else if ('IntersectionObserver' in window) {
+      // only animate while the stage is on screen
+      new IntersectionObserver((entries) => {
+        entries[0].isIntersecting ? play() : stop();
+      }, { threshold: 0.15 }).observe(stage);
+      document.addEventListener('visibilitychange', () => {
+        document.hidden ? stop() : play();
+      });
+    } else {
+      play();
+    }
+  }
+
+  /* ---- cursor spotlight on cards ---- */
+  if (!reducedMotion && matchMedia('(pointer: fine)').matches) {
+    let raf = 0;
+    document.addEventListener('mousemove', (e) => {
+      const card = e.target instanceof Element && e.target.closest('.spot');
+      if (!card || raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
+      });
+    }, { passive: true });
+  }
+
+  /* ---- nav shadow after scroll ---- */
+  const nav = document.querySelector('.nav');
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
   /* ---- keyboard shortcuts on hero CTAs (G / S) ---- */

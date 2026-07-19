@@ -47,31 +47,72 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <p class="eyebrow reveal">
-      <span class="badge-dot" aria-hidden="true"></span>
-      Open source · MIT · Development preview
-    </p>
-    <h1 class="reveal">Observable agent work,<br>from prompt to proof.</h1>
-    <p class="hero-sub reveal">
-      Charter is a local-first desktop IDE for delegating real repository work to coding
-      agents — without giving up visibility or control.
-    </p>
-    <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="#start" data-key="g">Get started <kbd>G</kbd></a>
-      <a class="btn btn-ghost" href="https://github.com/longyunfeigu/bullpen" rel="noopener" data-key="s">
-        <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        Star on GitHub <kbd>S</kbd>
-      </a>
-    </div>
-    <p class="hero-note reveal">macOS &amp; Windows targets · Linux preview — <a href="#start">build from source</a> in about two minutes</p>
-
-    <figure class="hero-shot reveal">
-      <div class="window">
-        <img src="assets/session-diff.png" width="1440" height="900" alt="A Charter Session: the agent conversation and work log on the left; changed files, an inline diff, and a passed verification check on the right; Request changes, Rollback, and Approve actions below." fetchpriority="high">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow reveal">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Open source · MIT · Development preview
+      </p>
+      <h1 class="reveal">Observable agent work,<br>from prompt to proof.</h1>
+      <p class="hero-sub reveal">
+        Charter is a local-first desktop IDE for delegating real repository work to coding
+        agents — without giving up visibility or control.
+      </p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#start" data-key="g">Get started <kbd>G</kbd></a>
+        <a class="btn btn-ghost" href="https://github.com/longyunfeigu/bullpen" rel="noopener" data-key="s">
+          <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Star on GitHub <kbd>S</kbd>
+        </a>
       </div>
-      <figcaption>One Session keeps the conversation, evidence, code, verification, and decision in view.</figcaption>
-    </figure>
+      <p class="hero-note reveal">macOS &amp; Windows targets · Linux preview — <a href="#start">build from source</a> in about two minutes</p>
+
+      <figure class="hero-stage reveal" data-stage-ms="3600">
+        <div class="stage-frame">
+          <img src="assets/stages/stage-1.png" width="1440" height="900" class="is-active" alt="Act one — Delegate: the composer holds 'Harden checkout retries and add regression coverage', ready to submit." fetchpriority="high">
+          <img src="assets/stages/stage-2.png" width="1440" height="900" alt="Act two — Plan: the agent proposes a two-step plan and waits for approval; Approve plan and Edit plan buttons.">
+          <img src="assets/stages/stage-3.png" width="1440" height="900" alt="Act three — Work: the Session runs with a live board of files being written and a Stop button always in reach.">
+          <img src="assets/stages/stage-4.png" width="1440" height="900" alt="Act four — Review: work parks at Ready to review with a completion notice, changed files, and Request changes, Rollback, and Approve actions.">
+        </div>
+        <div class="stage-rail" role="tablist" aria-label="Stages of one delegation">
+          <button class="stage-step is-active" type="button" role="tab" aria-selected="true"><span class="stage-meter" aria-hidden="true"></span>Delegate</button>
+          <button class="stage-step" type="button" role="tab" aria-selected="false"><span class="stage-meter" aria-hidden="true"></span>Plan</button>
+          <button class="stage-step" type="button" role="tab" aria-selected="false"><span class="stage-meter" aria-hidden="true"></span>Work</button>
+          <button class="stage-step" type="button" role="tab" aria-selected="false"><span class="stage-meter" aria-hidden="true"></span>Review</button>
+        </div>
+        <figcaption>One real delegation, four acts — captured from the running application.</figcaption>
+      </figure>
+    </div>
   </section>
+
+  <!-- ============ KEYWORD MARQUEE ============ -->
+  <aside class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>evidence ledger</span><i>·</i>
+      <span>four gates</span><i>·</i>
+      <span>byte-exact rollback</span><i>·</i>
+      <span>isolated worktrees</span><i>·</i>
+      <span>ready-to-review, never auto-accept</span><i>·</i>
+      <span>recorded verification</span><i>·</i>
+      <span>session replay</span><i>·</i>
+      <span>local-first</span><i>·</i>
+      <span>R0–R4 permissions</span><i>·</i>
+      <span>keys in the keychain</span><i>·</i>
+    </div>
+    <div class="marquee-track" aria-hidden="true">
+      <span>evidence ledger</span><i>·</i>
+      <span>four gates</span><i>·</i>
+      <span>byte-exact rollback</span><i>·</i>
+      <span>isolated worktrees</span><i>·</i>
+      <span>ready-to-review, never auto-accept</span><i>·</i>
+      <span>recorded verification</span><i>·</i>
+      <span>session replay</span><i>·</i>
+      <span>local-first</span><i>·</i>
+      <span>R0–R4 permissions</span><i>·</i>
+      <span>keys in the keychain</span><i>·</i>
+    </div>
+  </aside>
 
   <!-- ============ WHY ============ -->
   <section class="why" id="why">
@@ -169,25 +210,25 @@
     </header>
 
     <ol class="gate-grid">
-      <li class="gate-card reveal">
+      <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">01</span>
         <h3>Plan</h3>
         <p>The agent proposes steps, scope, and a verification approach before it writes.
         You approve, edit, or reject.</p>
       </li>
-      <li class="gate-card reveal">
+      <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">02</span>
         <h3>Permission</h3>
         <p>Every tool call is policy-checked in one gateway. Risky operations ask first;
         forbidden ones never run.</p>
       </li>
-      <li class="gate-card reveal">
+      <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">03</span>
         <h3>Verification</h3>
         <p>Recorded checks run against the actual worktree. Failures stay on the record —
         a re-run never erases history.</p>
       </li>
-      <li class="gate-card reveal">
+      <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">04</span>
         <h3>Review</h3>
         <p>Completion parks at <em>Ready to review</em>, never auto-accepts. And rollback is
@@ -251,22 +292,22 @@
     </header>
 
     <ul class="sec-grid">
-      <li class="sec-card reveal">
+      <li class="sec-card reveal spot">
         <h3>Isolated by architecture</h3>
         <p>Interface, sandboxed bridge, desktop host, and model process are separate trust
         boundaries. Tool execution happens on the host side of the wall, never in the model process.</p>
       </li>
-      <li class="sec-card reveal">
+      <li class="sec-card reveal spot">
         <h3>Reversible by default</h3>
         <p>Changes are snapshotted before they happen and written atomically with revision checks.
         Rollback restores files byte-exact and verifies every hash.</p>
       </li>
-      <li class="sec-card reveal">
+      <li class="sec-card reveal spot">
         <h3>Keys stay in the keychain</h3>
         <p>Provider credentials are encrypted with OS-backed storage and never reach the
         interface — it only ever learns that a key <em>exists</em>.</p>
       </li>
-      <li class="sec-card reveal">
+      <li class="sec-card reveal spot">
         <h3>Local-first, honestly</h3>
         <p>Projects, task state, and evidence stay on your machine. Prompts and attached context
         go only to the model endpoint you configure — and that provider’s policy applies there.</p>
@@ -286,7 +327,7 @@
     </header>
 
     <ul class="ide-grid ide-grid-featured">
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/notice.png" width="540" height="338" alt="A completion notice in the top corner: amber tone bar, 'Ready for review — Harden checkout retries, 3 files changed', beside the review panel."></figure>
         <div class="ide-card-body">
           <h3>Completion notices</h3>
@@ -294,7 +335,7 @@
           failure red — and the Session pulses in the rail until you open it.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/presence.png" width="500" height="313" alt="The live board during a run: 'THIS SESSION — LIVE', 8 writes/min, two file tiles marked 'writing' with activity bars."></figure>
         <div class="ide-card-body">
           <h3>Live presence</h3>
@@ -302,7 +343,7 @@
           work is happening, the moment it happens.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/terminal.png" width="860" height="538" alt="A real zsh terminal inside Charter running npm test, with the live PTY badge and the passing test output."></figure>
         <div class="ide-card-body">
           <h3>Real terminals</h3>
@@ -310,7 +351,7 @@
           when a long one finishes. PTYs stay alive while you switch Sessions.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/replay.png" width="1440" height="900" alt="Session replay: a semantic timeline with request, method, decision, change, and result stops, a scrubber with playback controls, and the recorded final report."></figure>
         <div class="ide-card-body">
           <h3>Session replay</h3>
@@ -318,7 +359,7 @@
           read-only, without touching your worktree.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/skills.png" width="690" height="431" alt="The composer with the slash-skill picker open: three managed skills with descriptions, keyboard hints to select and insert."></figure>
         <div class="ide-card-body">
           <h3>Skills</h3>
@@ -326,7 +367,7 @@
           <code>/</code> right in the composer.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/skins.png" width="1100" height="690" alt="The same home surface in Charter's four skins — Studio, Terminal, Archive, and Index."></figure>
         <div class="ide-card-body">
           <h3>Yours to tune</h3>
@@ -337,7 +378,7 @@
     </ul>
 
     <ul class="ide-grid ide-grid-featured">
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/editor.png" width="1120" height="700" alt="Monaco editor split into two panes with the find widget open and matches highlighted, next to the project file tree."></figure>
         <div class="ide-card-body">
           <h3>A real editor</h3>
@@ -345,7 +386,7 @@
           Your cursor stays put while the agent edits beside you.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/git.png" width="1120" height="700" alt="The source-control panel: a staged change, an untracked file, and a commit message ready to go, beside the split editor."></figure>
         <div class="ide-card-body">
           <h3>Git, built in</h3>
@@ -353,7 +394,7 @@
           agent tool, by design.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/search.png" width="1120" height="700" alt="Project-wide search results for 'add' grouped by file, with match counts and include/exclude filters."></figure>
         <div class="ide-card-body">
           <h3>Project-wide search</h3>
@@ -361,7 +402,7 @@
           before they touch anything.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/intelligence.png" width="1120" height="700" alt="A TypeScript type error marked in the editor and listed in the Problems panel: 'Type number is not assignable to type string'."></figure>
         <div class="ide-card-body">
           <h3>Code intelligence</h3>
@@ -369,7 +410,7 @@
           the same diagnostics the agent sees.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/preview.png" width="1440" height="900" alt="The review Preview tab: a demo app served from the task's isolated worktree, with a drawn marquee and a feedback note — 'The hint wraps on small widths' — ready to send to the agent."></figure>
         <div class="ide-card-body">
           <h3>Live preview</h3>
@@ -377,7 +418,7 @@
           agent visual feedback by pointing at elements.</p>
         </div>
       </li>
-      <li class="ide-card ide-card-shot reveal">
+      <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="assets/features/steer.png" width="896" height="600" alt="A running Session with a steering reply typed into the composer: 'Skip the second note — verify what is there now.'"></figure>
         <div class="ide-card-body">
           <h3>Steer mid-flight</h3>
