@@ -74,10 +74,10 @@
 
       <figure class="hero-stage reveal" data-stage-ms="3600">
         <div class="stage-frame">
-          <img src="assets/stages/stage-1.png" width="1440" height="900" class="is-active" alt="Act one — Delegate: the composer holds 'Harden checkout retries and add regression coverage', ready to submit." fetchpriority="high">
-          <img src="assets/stages/stage-2.png" width="1440" height="900" alt="Act two — Plan: the agent proposes a two-step plan and waits for approval; Approve plan and Edit plan buttons.">
-          <img src="assets/stages/stage-3.png" width="1440" height="900" alt="Act three — Work: the Session runs with a live board of files being written and a Stop button always in reach.">
-          <img src="assets/stages/stage-4.png" width="1440" height="900" alt="Act four — Review: work parks at Ready to review with a completion notice, changed files, and Request changes, Rollback, and Approve actions.">
+          <img src="assets/stages/stage-1.png" width="1440" height="900" class="is-active" alt="Act one — Delegate: the current Charter launcher, with agent and permission controls ready for a new task." fetchpriority="high">
+          <img src="assets/stages/stage-2.png" width="1440" height="900" alt="Act two — Plan: the agent proposes a rate-limiting plan and waits for approval, with Approve plan and Edit plan actions.">
+          <img src="assets/stages/stage-3.png" width="1440" height="900" alt="Act three — Work: a running Session shows live file activity while a steering instruction is ready in the composer.">
+          <img src="assets/stages/stage-4.png" width="1440" height="900" alt="Act four — Review: completed work waits for review with changed files, a passed verification, and approval controls in one place.">
         </div>
         <div class="stage-rail" role="tablist" aria-label="Stages of one delegation">
           <button class="stage-step is-active" type="button" role="tab" aria-selected="true"><span class="stage-meter" aria-hidden="true"></span>Delegate</button>
@@ -100,6 +100,7 @@
       <span>ready-to-review, never auto-accept</span><i>·</i>
       <span>recorded verification</span><i>·</i>
       <span>session replay</span><i>·</i>
+      <span>project memory</span><i>·</i>
       <span>local-first</span><i>·</i>
       <span>R0–R4 permissions</span><i>·</i>
       <span>keys in the keychain</span><i>·</i>
@@ -112,6 +113,7 @@
       <span>ready-to-review, never auto-accept</span><i>·</i>
       <span>recorded verification</span><i>·</i>
       <span>session replay</span><i>·</i>
+      <span>project memory</span><i>·</i>
       <span>local-first</span><i>·</i>
       <span>R0–R4 permissions</span><i>·</i>
       <span>keys in the keychain</span><i>·</i>
@@ -189,7 +191,7 @@
       </div>
       <figure class="tour-shot reveal">
         <div class="window window-float">
-          <img src="assets/agent-picker.png" width="810" height="340" alt="Charter's composer with the agent picker open: Charter Agent, Claude Code, and Codex; permission modes Read, Approve, Auto, and Full below.">
+          <img src="assets/agent-picker.png" width="1440" height="520" alt="Charter's current launcher with the agent picker open: Charter Agent, Claude Code, and Codex; permission modes Read, Approve, Auto, and Full below.">
         </div>
       </figure>
     </article>
@@ -357,7 +359,7 @@
 
     <ul class="ide-grid ide-grid-featured">
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/notice.png" width="540" height="338" alt="A completion notice in the top corner: amber tone bar, 'Ready for review — Harden checkout retries, 3 files changed', beside the review panel."></figure>
+        <figure><img src="assets/features/notice.png" width="1440" height="900" alt="Two completion notices in the top corner, beside a Session that is ready for review with changed-file evidence."></figure>
         <div class="ide-card-body">
           <h3>Completion notices</h3>
           <p>When any Session finishes, a toned notice slides in — success green, review amber,
@@ -365,7 +367,7 @@
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/presence.png" width="500" height="313" alt="The live board during a run: 'THIS SESSION — LIVE', 8 writes/min, two file tiles marked 'writing' with activity bars."></figure>
+        <figure><img src="assets/features/presence.png" width="1440" height="900" alt="The current live board during a run: 'THIS SESSION — LIVE', two file tiles marked writing, and activity bars updating in place."></figure>
         <div class="ide-card-body">
           <h3>Live presence</h3>
           <p>File tiles ripple as the agent writes. A breathing indicator shows exactly where
@@ -397,18 +399,18 @@
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/skins.png" width="1100" height="690" alt="The same home surface in Charter's four skins — Studio, Terminal, Archive, and Index."></figure>
+        <figure><img src="assets/features/memory.png" width="1440" height="900" alt="Charter's Memory manager, with rules grouped by agent and project plus distribution controls for Charter runs, CLAUDE.md, and AGENTS.md."></figure>
         <div class="ide-card-body">
-          <h3>Yours to tune</h3>
-          <p>Four coordinated skins in light and dark, a command palette, a quick launcher —
-          and analytics that are off by default.</p>
+          <h3>Memory, out in the open</h3>
+          <p>Project rules distilled from review feedback stay visible by agent and project.
+          Add or disable rules, then choose where they are distributed.</p>
         </div>
       </li>
     </ul>
 
     <ul class="ide-grid ide-grid-featured">
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/editor.png" width="1120" height="700" alt="Monaco editor split into two panes with the find widget open and matches highlighted, next to the project file tree."></figure>
+        <figure><img src="assets/features/editor.png" width="1440" height="900" alt="The current Files workspace with Monaco split into two panes, the find widget open, and matches highlighted beside the project tree."></figure>
         <div class="ide-card-body">
           <h3>A real editor</h3>
           <p>Monaco with split views, find &amp; replace, and graceful large-file handling.
@@ -416,7 +418,7 @@
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/git.png" width="1120" height="700" alt="The source-control panel: a staged change, an untracked file, and a commit message ready to go, beside the split editor."></figure>
+        <figure><img src="assets/features/git.png" width="1440" height="900" alt="The current source-control workspace: a staged change, an untracked file, and a commit message ready beside the split editor."></figure>
         <div class="ide-card-body">
           <h3>Git, built in</h3>
           <p>Status, diff, stage, commit, branches. And <code>git push</code> is never an
@@ -424,7 +426,7 @@
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/search.png" width="1120" height="700" alt="Project-wide search results for 'add' grouped by file, with match counts and include/exclude filters."></figure>
+        <figure><img src="assets/features/search.png" width="1440" height="900" alt="The current project-wide search surface, with results for 'add' grouped by file and match counts beside the split editor."></figure>
         <div class="ide-card-body">
           <h3>Project-wide search</h3>
           <p>ripgrep-fast search across the repository, with replacements previewed
@@ -432,7 +434,7 @@
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/intelligence.png" width="1120" height="700" alt="A TypeScript type error marked in the editor and listed in the Problems panel: 'Type number is not assignable to type string'."></figure>
+        <figure><img src="assets/features/intelligence.png" width="1440" height="900" alt="The current editor with a TypeScript error marked inline and listed in the Problems panel below."></figure>
         <div class="ide-card-body">
           <h3>Code intelligence</h3>
           <p>Language smarts for TypeScript and JavaScript, with Python basics —
@@ -440,7 +442,7 @@
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/preview.png" width="1440" height="900" alt="The review Preview tab: a demo app served from the task's isolated worktree, with a drawn marquee and a feedback note — 'The hint wraps on small widths' — ready to send to the agent."></figure>
+        <figure><img src="assets/features/preview.png" width="1440" height="900" alt="The current Session Preview: a checkout app served from the task worktree beside an attached visual note and a follow-up composer."></figure>
         <div class="ide-card-body">
           <h3>Live preview</h3>
           <p>See the app running in its worktree, inline — then draw on it and send the
@@ -448,7 +450,7 @@
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="assets/features/steer.png" width="896" height="600" alt="A running Session with a steering reply typed into the composer: 'Skip the second note — verify what is there now.'"></figure>
+        <figure><img src="assets/features/steer.png" width="1440" height="900" alt="A running Session with live file activity and a steering reply typed into the composer: 'Skip the second note — verify what is there now.'"></figure>
         <div class="ide-card-body">
           <h3>Steer mid-flight</h3>
           <p>Redirect a running agent, queue follow-ups, or stop instantly —
