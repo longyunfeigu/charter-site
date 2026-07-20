@@ -30,10 +30,10 @@ Every later `git push` to `main` deploys production automatically; pushes to oth
 
 ## 3. Point GitHub at the site
 
-From the product repo (`bullpen`):
+From the product repo (`Charter`):
 
 ```bash
-gh repo edit longyunfeigu/bullpen --homepage "https://<project>.pages.dev"
+gh repo edit longyunfeigu/Charter --homepage "https://<project>.pages.dev"
 ```
 
 Then add the link at the top of the product README (e.g. under the tagline or in the badge row).

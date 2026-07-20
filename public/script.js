@@ -2,7 +2,7 @@
 (() => {
   'use strict';
 
-  const REPO = 'longyunfeigu/bullpen';
+  const REPO = 'longyunfeigu/Charter';
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

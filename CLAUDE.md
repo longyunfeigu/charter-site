@@ -1,6 +1,6 @@
 # CLAUDE.md — Charter marketing site
 
-Static marketing site for Charter (https://github.com/longyunfeigu/bullpen). No build step, no framework, no backend — plain HTML/CSS/JS.
+Static marketing site for Charter (https://github.com/longyunfeigu/Charter). No build step, no framework, no backend — plain HTML/CSS/JS.
 
 **Only `public/` is deployed.** Everything at the repo root (this file, README.md, DEPLOY.md) is development material and must never be published — that separation exists so internal notes can't leak onto the public site. Never move site serving back to the repo root.
 

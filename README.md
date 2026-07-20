@@ -1,6 +1,6 @@
 # Charter marketing site
 
-The public landing page for [Charter](https://github.com/longyunfeigu/bullpen) — a local-first desktop IDE for delegating real repository work to coding agents without giving up visibility or control.
+The public landing page for [Charter](https://github.com/longyunfeigu/Charter) — a local-first desktop IDE for delegating real repository work to coding agents without giving up visibility or control.
 
 Plain HTML/CSS/JS. No build step, no framework, no backend. **The deploy artifact is the `public/` directory** — repo-root files (this README, DEPLOY.md, CLAUDE.md) are development material and are not published.
 
