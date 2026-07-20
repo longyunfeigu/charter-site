@@ -548,6 +548,67 @@ html:not(.js) .stage-frame img:last-of-type { opacity: 1; }
 
 .thesis em { font-style: italic; color: var(--fg); }
 
+.thesis p.thesis-tag {
+  margin-top: 26px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--warning);
+}
+
+/* ---------- three-way choice ---------- */
+
+.choose-grid {
+  list-style: none;
+  max-width: var(--w-content);
+  margin: 64px auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.choose-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 26px 24px;
+}
+
+.choose-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-bottom: 12px;
+}
+
+.choose-card h3 { font-size: 21px; }
+
+.choose-card > p:last-child {
+  margin-top: 12px;
+  color: var(--fg-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.choose-hl {
+  border-color: color-mix(in srgb, var(--warning) 55%, var(--border-strong));
+  background: color-mix(in srgb, var(--warning) 4%, var(--bg-card));
+  box-shadow: var(--shadow-card), 0 0 0 3px color-mix(in srgb, var(--warning) 10%, transparent);
+}
+
+.choose-hl .choose-kicker { color: var(--warning); }
+
+@media (max-width: 959px) {
+  .choose-grid { grid-template-columns: 1fr; }
+}
+
 .equation {
   margin: 64px auto 0;
   max-width: 880px;

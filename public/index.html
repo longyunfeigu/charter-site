@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Charter — Observable agent work, from prompt to proof</title>
-  <meta name="description" content="Charter is a local-first desktop IDE for delegating real repository work to coding agents — without giving up visibility or control. Open source, MIT licensed.">
+  <meta name="description" content="The best coding agents are CLIs — Charter is their IDE. Run Claude Code, Codex, or the managed Charter Agent with an editor, isolated worktrees, evidence, and review built around them. Open source, MIT licensed.">
   <link rel="canonical" href="https://charter-15n.pages.dev/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Charter">
   <meta property="og:title" content="Charter — Observable agent work, from prompt to proof">
-  <meta property="og:description" content="A local-first desktop IDE for delegating real repository work to coding agents — without giving up visibility or control.">
+  <meta property="og:description" content="The best coding agents are CLIs — Charter is their IDE. Claude Code, Codex, and more as first-class citizens, with evidence, gates, and rollback around them.">
   <meta property="og:url" content="https://charter-15n.pages.dev/">
   <meta property="og:image" content="https://charter-15n.pages.dev/assets/og-card.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -54,10 +54,11 @@
         <span class="badge-dot" aria-hidden="true"></span>
         Open source · MIT · Development preview
       </p>
-      <h1 class="reveal">Observable agent work,<br>from prompt to proof.</h1>
+      <h1 class="reveal">The best coding agents are CLIs.<br>Charter is their IDE.</h1>
       <p class="hero-sub reveal">
-        Charter is a local-first desktop IDE for delegating real repository work to coding
-        agents — without giving up visibility or control.
+        Run <strong>Claude Code</strong>, <strong>Codex</strong>, or the managed Charter Agent
+        as first-class citizens — a real editor, isolated worktrees, evidence, and review,
+        built around the agent you already trust.
       </p>
       <div class="hero-cta reveal">
         <a class="btn btn-primary" href="#start" data-key="g">Get started <kbd>G</kbd></a>
@@ -117,11 +118,34 @@
   <!-- ============ WHY ============ -->
   <section class="why" id="why">
     <blockquote class="thesis reveal">
-      <p>Most coding-agent tools make the model easy to start.
-      Charter is built for everything that happens <em>after you press&nbsp;Enter</em> —
-      what the agent did, where it did it, whether the result works,
-      and whether you want to keep it.</p>
+      <p>Charter starts from a simple observation: the strongest coding agents live on the
+      command line, while the nicest IDEs ship their own — and ask you to settle.
+      <em>You shouldn’t have to choose</em> between the agent you trust
+      and the cockpit you deserve.</p>
+      <p class="thesis-tag">Observable agent work, from prompt to proof.</p>
     </blockquote>
+
+    <ul class="choose-grid">
+      <li class="choose-card reveal spot">
+        <p class="choose-kicker">Agent CLIs</p>
+        <h3>The frontier, in a terminal</h3>
+        <p>Claude Code and Codex are where the state of the art lives. But a terminal gives
+        you scrollback, not oversight — no diff surface, no review gate, no replay.</p>
+      </li>
+      <li class="choose-card choose-hl reveal spot">
+        <p class="choose-kicker">Charter</p>
+        <h3>Their IDE, your rules</h3>
+        <p>The IDE shell around the agents you already trust — editor, worktrees, real
+        terminals, plus the evidence, gates, and rollback a CLI never had. It keeps the
+        terminal’s soul: persistent PTYs, legible command blocks, multiplexed sessions.</p>
+      </li>
+      <li class="choose-card reveal spot">
+        <p class="choose-kicker">AI-first IDEs</p>
+        <h3>A nice shell, their pilot</h3>
+        <p>Polished cockpits — but the agent comes built in, and it’s theirs. The editor is
+        yours; the hands on the keyboard are chosen for you.</p>
+      </li>
+    </ul>
 
     <div class="equation reveal" role="img" aria-label="A Session equals project plus agent plus worktree plus conversation plus plan plus files plus terminals plus preview plus verification plus review.">
       <span class="eq-lhs">Session</span>
@@ -206,7 +230,9 @@
   <section class="gates" id="gates">
     <header class="section-head reveal">
       <h2>Autonomy you can undo</h2>
-      <p>Four gates stand between a prompt and your codebase. Each one leaves evidence.</p>
+      <p>Most tools make the model easy to start. Charter is built for everything
+      <em>after you press Enter</em> — four gates stand between a prompt and your codebase,
+      and each one leaves evidence.</p>
     </header>
 
     <ol class="gate-grid">
@@ -483,10 +509,10 @@
       </details>
       <details class="reveal">
         <summary>How is this different from an AI-first IDE?</summary>
-        <p>Charter doesn’t compete on making the model type faster. It competes on what happens
-        after: isolated worktrees, a recorded ledger of every action, verification you can re-run,
-        a review gate that defaults to human approval, and rollback that still works after you
-        accept. If you like your agent, keep it — Claude Code and Codex run inside Charter.</p>
+        <p>Charter doesn’t compete with your agent — it competes with the terminal window your
+        agent lives in. AI-first IDEs ship their own agent; Charter wraps the ones you already
+        use in isolated worktrees, a recorded ledger, re-runnable verification, a review gate
+        that defaults to human approval, and rollback that works even after accept.</p>
       </details>
       <details class="reveal">
         <summary>Is it really open source?</summary>
