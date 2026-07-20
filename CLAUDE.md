@@ -15,7 +15,8 @@ Static marketing site for Charter (https://github.com/longyunfeigu/Charter). No 
 ## Structure
 
 - `public/` — the deploy artifact, and nothing else
-  - `index.html` — the entire page
+  - `index.html` — the entire page (English)
+  - `zh/index.html` — the Simplified Chinese page. **Every copy change must land in both files**; keep section structure identical so styles/scripts stay shared. Chinese terminology follows the product repo's README.zh-CN.md (审查/账本/回滚; Session/Agent/Worktree stay English)
   - `styles.css` — all styles; design tokens as CSS variables at the top
   - `script.js` — progressive enhancement only (page must read fine with JS disabled)
   - `assets/` — product screenshots (regenerate via the README-assets Playwright spec in the product repo), favicon, og-image

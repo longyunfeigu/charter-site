@@ -145,8 +145,9 @@
         const rel = Array.isArray(list) ? list.find((x) => !x.draft && !x.prerelease) || list[0] : null;
         if (rel && rel.tag_name && Array.isArray(rel.assets) && rel.assets.length > 0) {
           const url = rel.html_url;
-          note.innerHTML =
-            `Prefer an installer? <a href="${url}" rel="noopener">Download ${rel.tag_name}</a> from GitHub Releases — or build from source above.`;
+          note.innerHTML = document.documentElement.lang.startsWith('zh')
+            ? `想要安装包？<a href="${url}" rel="noopener">下载 ${rel.tag_name}</a>（GitHub Releases）——或按上方从源码构建。`
+            : `Prefer an installer? <a href="${url}" rel="noopener">Download ${rel.tag_name}</a> from GitHub Releases — or build from source above.`;
         }
       })
       .catch(() => { /* no releases yet — the build-from-source note stands */ });
