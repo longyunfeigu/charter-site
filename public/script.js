@@ -113,7 +113,7 @@
       try {
         await navigator.clipboard.writeText(btn.dataset.copy || '');
         const prev = btn.textContent;
-        btn.textContent = 'Copied';
+        btn.textContent = document.documentElement.lang.startsWith('zh') ? '已复制' : 'Copied';
         btn.classList.add('copied');
         setTimeout(() => { btn.textContent = prev; btn.classList.remove('copied'); }, 1600);
       } catch { /* clipboard unavailable — leave the button as-is */ }
@@ -146,7 +146,7 @@
         if (rel && rel.tag_name && Array.isArray(rel.assets) && rel.assets.length > 0) {
           const url = rel.html_url;
           note.innerHTML = document.documentElement.lang.startsWith('zh')
-            ? `想要安装包？<a href="${url}" rel="noopener">下载 ${rel.tag_name}</a>（GitHub Releases）——或按上方从源码构建。`
+            ? `想直接安装？可以从 GitHub Releases <a href="${url}" rel="noopener">下载 ${rel.tag_name}</a>，也可以按上方步骤从源码构建。`
             : `Prefer an installer? <a href="${url}" rel="noopener">Download ${rel.tag_name}</a> from GitHub Releases — or build from source above.`;
         }
       })

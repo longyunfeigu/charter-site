@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Charter — 最强的 coding agent 都是 CLI，Charter 是它们的 IDE</title>
-  <meta name="description" content="最强的 coding agent 都是 CLI——Charter 是它们的 IDE。让 Claude Code、Codex 或内置 Charter Agent 以一等公民身份运行，围绕它们构建编辑器、隔离 Worktree、证据与审查。开源，MIT 协议。">
+  <title>Charter — 最强的编程 Agent 都在命令行里，Charter 是为它们而生的 IDE</title>
+  <meta name="description" content="最强的编程 Agent 都在命令行里，Charter 是为它们而生的 IDE。直接使用 Claude Code、Codex 或内置 Charter Agent，编辑器、隔离 Worktree、证据与审查一应俱全。开源，MIT 许可。">
   <link rel="canonical" href="https://charter-15n.pages.dev/zh/">
   <link rel="alternate" hreflang="en" href="https://charter-15n.pages.dev/">
   <link rel="alternate" hreflang="zh-CN" href="https://charter-15n.pages.dev/zh/">
@@ -14,8 +14,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Charter">
-  <meta property="og:title" content="Charter — 最强的 coding agent 都是 CLI，Charter 是它们的 IDE">
-  <meta property="og:description" content="让 Claude Code、Codex 等以一等公民身份运行——证据、门与回滚围绕它们构建。">
+  <meta property="og:title" content="Charter — 最强的编程 Agent 都在命令行里，Charter 是为它们而生的 IDE">
+  <meta property="og:description" content="直接使用 Claude Code、Codex 等 Agent，并为它们补上证据、审查关卡与回滚。">
   <meta property="og:url" content="https://charter-15n.pages.dev/zh/">
   <meta property="og:image" content="https://charter-15n.pages.dev/assets/og-card.png">
   <meta property="og:locale" content="zh_CN">
@@ -29,15 +29,15 @@
   <div class="nav-inner">
     <a class="wordmark" href="#top">Charter</a>
     <nav class="nav-links" aria-label="站点导航">
-      <a href="#why">立意</a>
+      <a href="#why">理念</a>
       <a href="#tour">导览</a>
-      <a href="#gates">四道门</a>
+      <a href="#gates">四道关</a>
       <a href="#security">安全</a>
       <a href="#ide">IDE</a>
       <a href="#start">开始使用</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-ghost btn-sm" href="/" hreflang="en" aria-label="Switch to English">EN</a>
+      <a class="btn btn-ghost btn-sm" href="/" hreflang="en" aria-label="切换到英文">EN</a>
       <a class="btn btn-ghost btn-sm" href="https://github.com/longyunfeigu/Charter" rel="noopener">
         <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         <span>GitHub</span><span class="star-count" data-stars hidden></span>
@@ -58,11 +58,10 @@
         <span class="badge-dot" aria-hidden="true"></span>
         开源 · MIT · 开发预览版
       </p>
-      <h1 class="reveal">最强的 coding agent 都是 CLI。<br>Charter 是它们的 IDE。</h1>
+      <h1 class="reveal">最强的编程 Agent，都在命令行里。<br>Charter 是为它们而生的 IDE。</h1>
       <p class="hero-sub reveal">
-        让 <strong>Claude Code</strong>、<strong>Codex</strong> 或内置的 Charter Agent
-        以一等公民身份运行——真正的编辑器、隔离的 Worktree、证据与审查，
-        全部围绕你已经信任的 agent 构建。
+        在 Charter 里直接使用 <strong>Claude Code</strong>、<strong>Codex</strong> 或内置 Charter Agent。
+        编辑器、隔离 Worktree、证据与审查，全都围绕你已经信任的 Agent 设计。
       </p>
       <div class="hero-cta reveal">
         <a class="btn btn-primary" href="#start" data-key="g">开始使用 <kbd>G</kbd></a>
@@ -71,22 +70,22 @@
           GitHub 加星 <kbd>S</kbd>
         </a>
       </div>
-      <p class="hero-note reveal">目标平台 macOS 与 Windows · Linux 预览 — <a href="#start">从源码构建</a>约两分钟</p>
+      <p class="hero-note reveal">面向 macOS 和 Windows · Linux 预览版 · 约两分钟即可<a href="#start">从源码启动</a></p>
 
       <figure class="hero-stage reveal" data-stage-ms="3600">
         <div class="stage-frame">
-          <img src="/assets/stages/stage-1.png" width="1440" height="900" class="is-active" alt="第一幕——委托：Composer 中写好了任务「Harden checkout retries and add regression coverage」，等待提交。" fetchpriority="high">
-          <img src="/assets/stages/stage-2.png" width="1440" height="900" alt="第二幕——计划：Agent 提出两步计划并等待批准；界面上有“批准计划”与“编辑计划”按钮。">
-          <img src="/assets/stages/stage-3.png" width="1440" height="900" alt="第三幕——执行：Session 运行中，实时面板展示正在写入的文件，Stop 按钮随手可及。">
-          <img src="/assets/stages/stage-4.png" width="1440" height="900" alt="第四幕——审查：工作停在待审查状态，完成通知、改动文件与请求修改、回滚、批准操作齐备。">
+          <img src="/assets/stages/stage-1.png" width="1440" height="900" class="is-active" alt="第一阶段，委托：Composer 中已经写好任务「Harden checkout retries and add regression coverage」，等待提交。" fetchpriority="high">
+          <img src="/assets/stages/stage-2.png" width="1440" height="900" alt="第二阶段，计划：Agent 提出两步计划并等待批准；界面上有“批准计划”和“编辑计划”按钮。">
+          <img src="/assets/stages/stage-3.png" width="1440" height="900" alt="第三阶段，执行：Session 正在运行，实时面板展示 Agent 正在写入的文件，Stop 按钮始终可用。">
+          <img src="/assets/stages/stage-4.png" width="1440" height="900" alt="第四阶段，审查：任务进入待审查状态；界面展示完成通知、改动文件，以及请求修改、回滚和批准操作。">
         </div>
-        <div class="stage-rail" role="tablist" aria-label="一次委托的四幕">
+        <div class="stage-rail" role="tablist" aria-label="一次委托的四个阶段">
           <button class="stage-step is-active" type="button" role="tab" aria-selected="true"><span class="stage-meter" aria-hidden="true"></span>委托</button>
           <button class="stage-step" type="button" role="tab" aria-selected="false"><span class="stage-meter" aria-hidden="true"></span>计划</button>
           <button class="stage-step" type="button" role="tab" aria-selected="false"><span class="stage-meter" aria-hidden="true"></span>执行</button>
           <button class="stage-step" type="button" role="tab" aria-selected="false"><span class="stage-meter" aria-hidden="true"></span>审查</button>
         </div>
-        <figcaption>一次真实的委托，四幕——全部截自运行中的应用。</figcaption>
+        <figcaption>一次真实的委托，四个阶段——画面全部来自实际运行的应用。</figcaption>
       </figure>
     </div>
   </section>
@@ -95,62 +94,62 @@
   <aside class="marquee" aria-hidden="true">
     <div class="marquee-track">
       <span>证据账本</span><i>·</i>
-      <span>四道门</span><i>·</i>
+      <span>四道关</span><i>·</i>
       <span>字节级回滚</span><i>·</i>
       <span>隔离 Worktree</span><i>·</i>
       <span>完成即待审，永不自动接受</span><i>·</i>
-      <span>可记录的验证</span><i>·</i>
+      <span>验证全程留痕</span><i>·</i>
       <span>Session 回放</span><i>·</i>
       <span>本地优先</span><i>·</i>
       <span>R0–R4 权限</span><i>·</i>
-      <span>密钥进钥匙串</span><i>·</i>
+      <span>密钥只进钥匙串</span><i>·</i>
     </div>
     <div class="marquee-track" aria-hidden="true">
       <span>证据账本</span><i>·</i>
-      <span>四道门</span><i>·</i>
+      <span>四道关</span><i>·</i>
       <span>字节级回滚</span><i>·</i>
       <span>隔离 Worktree</span><i>·</i>
       <span>完成即待审，永不自动接受</span><i>·</i>
-      <span>可记录的验证</span><i>·</i>
+      <span>验证全程留痕</span><i>·</i>
       <span>Session 回放</span><i>·</i>
       <span>本地优先</span><i>·</i>
       <span>R0–R4 权限</span><i>·</i>
-      <span>密钥进钥匙串</span><i>·</i>
+      <span>密钥只进钥匙串</span><i>·</i>
     </div>
   </aside>
 
   <!-- ============ WHY ============ -->
   <section class="why" id="why">
     <blockquote class="thesis reveal">
-      <p>Charter 源于一个朴素的观察：最强的 coding agent 活在命令行里，
-      而体验最好的 IDE 都内置自家的 agent——并要你将就。
-      <em>你不该被迫二选一</em>：一边是你信任的 agent，一边是你应得的驾驶舱。</p>
-      <p class="thesis-tag">看得见的 Agent 工作 · 从 Prompt 到 Proof</p>
+      <p>Charter 始于一个简单的问题：最强的编程 Agent 都在命令行里，
+      好用的 IDE 却往往绑定自家 Agent。
+      <em>为什么非得</em>在“信任的 Agent”和“顺手的 IDE”之间二选一？</p>
+      <p class="thesis-tag">从 Prompt 到 Proof，看清 Agent 的每一步</p>
     </blockquote>
 
     <ul class="choose-grid">
       <li class="choose-card reveal spot">
         <p class="choose-kicker">Agent CLI</p>
-        <h3>前沿，在终端里</h3>
-        <p>Claude Code 和 Codex 代表当今最强。但终端给你的只是滚动的输出，
-        不是掌控——没有 Diff 界面、没有审查门、没有回放。</p>
+        <h3>最前沿的 Agent，都在终端里</h3>
+        <p>Claude Code 和 Codex 代表着当下最前沿的能力。但在终端里，
+        你只能看着输出一屏屏滚过——没有 Diff 界面、没有审查关卡，也无法回放。</p>
       </li>
       <li class="choose-card choose-hl reveal spot">
         <p class="choose-kicker">Charter</p>
         <h3>它们的 IDE，你的规则</h3>
-        <p>给你已经信任的 agent 一个 IDE 外壳——编辑器、Worktree、真终端，
-        再加上 CLI 从未有过的证据、门与回滚。同时保留终端之魂：
-        持久 PTY、可读的命令块、多路复用的 Session。</p>
+        <p>给你信任的 Agent 配上一套真正的 IDE：编辑器、Worktree、真终端，
+        再把证据留痕、审查关卡和回滚补齐。终端的优势也都保留——
+        持久 PTY、清晰的命令块、多 Session 并行。</p>
       </li>
       <li class="choose-card reveal spot">
         <p class="choose-kicker">AI-first IDE</p>
-        <h3>漂亮的壳，别人的驾驶员</h3>
-        <p>驾驶舱很精致，但 agent 是内置的、是他们的。
-        编辑器归你；键盘上的那双手，替你选好了。</p>
+        <h3>好用的 IDE，换不了的 Agent</h3>
+        <p>IDE 做得再漂亮，内置 Agent 也已经由厂商替你选好。
+        编辑器是你的，敲键盘的那双手却不是。</p>
       </li>
     </ul>
 
-    <div class="equation reveal" role="img" aria-label="一个 Session 等于项目加 agent 加 worktree 加对话加计划加文件加终端加预览加验证加审查。">
+    <div class="equation reveal" role="img" aria-label="一个 Session 包含项目、Agent、Worktree、对话、计划、文件、终端、预览、验证和审查。">
       <span class="eq-lhs">Session</span>
       <span class="eq-op">=</span>
       <span class="eq-term">project</span><span class="eq-op">+</span>
@@ -164,32 +163,32 @@
       <span class="eq-term">verification</span><span class="eq-op">+</span>
       <span class="eq-term hl">review</span>
     </div>
-    <p class="equation-caption reveal">Session 是一次完整人机协作的基本单元。关于这个任务的一切，都不在别处。</p>
+    <p class="equation-caption reveal">Session 是人和 Agent 协作的完整单元——一个任务需要的上下文都收在这里，不会散落各处。</p>
   </section>
 
   <!-- ============ TOUR ============ -->
   <section class="tour" id="tour">
 
     <header class="section-head tour-head reveal">
-      <h2>一次委托，三个时刻</h2>
-      <p>下面每一屏都是真实应用在处理同一个 Session：
-      选好帮手，看着过程，裁决结果。</p>
+      <h2>一次委托，三个关键时刻</h2>
+      <p>下面的画面都来自同一个真实 Session：
+      选 Agent、看过程、验结果。</p>
     </header>
 
     <article class="tour-item">
       <div class="tour-copy reveal">
         <p class="tour-kicker">01 · 委托</p>
-        <h3>一个 Composer，装下每个 agent</h3>
-        <p>启动内置的 <strong>Charter Agent</strong>，或原生运行你已安装的
-        <strong>Claude Code</strong> 与 <strong>Codex</strong> CLI——同一套 Session
-        模型、同一道审查门，不用切换产品外壳。</p>
-        <p>每个任务给多长的缰绳，由你定：<span class="mode">Read</span>、
+        <h3>Agent 随你选，工作流不用换</h3>
+        <p>使用内置的 <strong>Charter Agent</strong>，也可以原生运行你已经安装的
+        <strong>Claude Code</strong> 或 <strong>Codex</strong> CLI。不管选谁，都沿用
+        同一套 Session 和审查流程，不必来回切换工具。</p>
+        <p>每个任务给多少权限，由你决定：<span class="mode">Read</span>、
         <span class="mode">Approve</span>、<span class="mode">Auto</span> 或
-        <span class="mode mode-full">Full</span>——从只读问答到受监督的自主。</p>
+        <span class="mode mode-full">Full</span>——从只读问答，到放手让它干。</p>
       </div>
       <figure class="tour-shot reveal">
         <div class="window window-float">
-          <img src="/assets/agent-picker.png" width="810" height="340" alt="Charter 的 Composer 展开了 agent 选择器：Charter Agent、Claude Code 与 Codex；下方是 Read、Approve、Auto、Full 四档权限模式。">
+          <img src="/assets/agent-picker.png" width="810" height="340" alt="Charter 的 Composer 展开了 Agent 选择器，可选 Charter Agent、Claude Code 和 Codex；下方是 Read、Approve、Auto、Full 四档权限模式。">
         </div>
       </figure>
     </article>
@@ -198,30 +197,30 @@
       <div class="tour-copy reveal">
         <p class="tour-kicker">02 · 观察</p>
         <h3>证据就在对话旁边</h3>
-        <p>Agent 运行时，文件写入、命令、Diff、预览、检查与决策组成同一条
-        按时间排列的账本——带时间戳和增删统计，实时更新。</p>
-        <p>不用在聊天记录里考古。工作日志<em>就是</em>界面本身，
-        结束后的 Session 还能逐步回放。</p>
+        <p>Agent 运行时，文件写入、命令、Diff、预览、检查和决策都会按时间顺序
+        记进同一本账本；时间戳和增删统计会实时更新。</p>
+        <p>不用再去聊天记录里考古：工作日志<em>就铺在</em>对话旁边；
+        Session 结束后，还能按步骤回放。</p>
       </div>
       <figure class="tour-shot reveal">
         <div class="window">
-          <img src="/assets/session-diff.png" width="1440" height="900" alt="Session 工作日志记录着读取、带增删统计的写入、测试运行与通过的验证——旁边就是它产出的内联 Diff。">
+          <img src="/assets/session-diff.png" width="1440" height="900" alt="Session 工作日志记录了文件读取、带增删统计的写入、测试运行和通过的验证；旁边显示对应的内联 Diff。">
         </div>
       </figure>
     </article>
 
     <article class="tour-item">
       <div class="tour-copy reveal">
-        <p class="tour-kicker">03 · 裁决</p>
-        <h3>先见证据，再谈批准</h3>
-        <p>Agent 说“完成”只意味着<strong>进入待审查</strong>。审查界面由真实记录的
-        证据构成——改动文件、验证历史、最终结果——而不是模型自己的一段总结。</p>
-        <p>查看带行号的 Diff，运行记录在案的检查，然后请求修改、回滚，
-        或者批准——整单、按文件，或按代码块。</p>
+        <p class="tour-kicker">03 · 验收</p>
+        <h3>先看证据，再决定是否批准</h3>
+        <p>Agent 说“完成”，只是把任务交到你手上，<strong>等待审查</strong>。
+        审查页展示改动文件、验证历史和最终结果，而不是让模型用一段总结自说自话。</p>
+        <p>看过带行号的 Diff、重新运行已经记录的检查后，再决定请求修改、回滚或批准；
+        既可整单处理，也可细到单个文件或改动块。</p>
       </div>
       <figure class="tour-shot reveal">
         <div class="window">
-          <img src="/assets/session-review.png" width="1440" height="900" alt="Charter 的审查界面：结果、改动文件、通过的验证，以及请求修改、回滚、批准操作。">
+          <img src="/assets/session-review.png" width="1440" height="900" alt="Charter 的审查界面展示最终结果、改动文件、通过的验证，以及请求修改、回滚和批准操作。">
         </div>
       </figure>
     </article>
@@ -231,47 +230,47 @@
   <!-- ============ GATES ============ -->
   <section class="gates" id="gates">
     <header class="section-head reveal">
-      <h2>可以撤销的自主</h2>
-      <p>多数工具只让模型“更容易启动”。Charter 关心的是你按下回车<em>之后</em>的一切——
-      在 prompt 和你的代码库之间立着四道门，每一道都留下证据。</p>
+      <h2>敢放手，因为随时收得回</h2>
+      <p>多数工具只管把 Agent 跑起来。Charter 更关心你按下回车<em>之后</em>的事——
+      从输入 Prompt 到实际改动代码，中间要过四道关，每一步都有记录。</p>
     </header>
 
     <ol class="gate-grid">
       <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">01</span>
         <h3>计划</h3>
-        <p>动笔之前，agent 先提出步骤、影响范围和验证方式。
+        <p>动手之前，Agent 先说明步骤、影响范围和验证方式。
         你可以批准、修改或驳回。</p>
       </li>
       <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">02</span>
         <h3>权限</h3>
-        <p>每次工具调用都经过同一个网关做策略检查。危险操作先询问；
-        禁止的操作根本不会执行。</p>
+        <p>每次工具调用都要先过统一网关。危险操作必须先问你；
+        禁止的操作则会被直接拦下。</p>
       </li>
       <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">03</span>
         <h3>验证</h3>
-        <p>记录在案的检查在真实 Worktree 里运行。失败会留在记录上——
-        重跑永远不会抹掉历史。</p>
+        <p>验证命令会在真实 Worktree 中运行，结果完整留存；
+        即使重跑，也不会覆盖之前的失败记录。</p>
       </li>
       <li class="gate-card reveal spot">
         <span class="gate-num" aria-hidden="true">04</span>
         <h3>审查</h3>
-        <p>完成只会停在<em>待审查</em>，永不自动接受。回滚是字节级的——
-        即使你已经接受了也还能回。</p>
+        <p>Agent 完成后，任务只会进入<em>待审查</em>，不会自动接受。
+        即使已经接受，仍可按字节精确回滚。</p>
       </li>
     </ol>
 
-    <p class="gates-note reveal">即使是需要用户主动选择的 <span class="mode mode-full">Full</span> 自主模式，也保留同一个网关、
-    审计痕迹与硬性禁区——验证失败会退回审查，已接受的工作依然可以回滚。</p>
+    <p class="gates-note reveal">即使主动开启 <span class="mode mode-full">Full</span> 模式，网关、审计记录和硬性限制依然保留——
+    验证失败会自动退回审查，已经接受的改动也照样能回滚。</p>
   </section>
 
   <!-- ============ PERMISSIONS ============ -->
   <section class="perm" id="permissions">
     <header class="section-head reveal">
-      <h2>权限是渐变，不是开关</h2>
-      <p>操作按后果分级。最危险的那一端不是弹一个警告框——而是根本不给运行。</p>
+      <h2>权限分级，不是一键全开</h2>
+      <p>操作越危险，限制越严格。到了最危险的 R4，不是弹窗警告，而是直接禁止。</p>
     </header>
 
     <div class="perm-table reveal" role="table" aria-label="权限等级">
@@ -285,72 +284,72 @@
         <span class="perm-level" role="cell">R1</span>
         <span class="perm-name" role="cell">工作区写入</span>
         <span class="perm-desc" role="cell">在隔离 Worktree 内创建或编辑文件</span>
-        <span class="perm-verdict ask" role="cell">询问，或按计划与模式放行</span>
+        <span class="perm-verdict ask" role="cell">询问确认，或按计划和模式放行</span>
       </div>
       <div class="perm-row" role="row">
         <span class="perm-level" role="cell">R2</span>
         <span class="perm-name" role="cell">本地执行</span>
         <span class="perm-desc" role="cell">已知的本地命令与验证检查</span>
-        <span class="perm-verdict ask" role="cell">已知检查可运行；未知命令询问</span>
+        <span class="perm-verdict ask" role="cell">已知检查直接运行；未知命令先询问</span>
       </div>
       <div class="perm-row" role="row">
         <span class="perm-level" role="cell">R3</span>
-        <span class="perm-name" role="cell">外部 / 不可逆</span>
-        <span class="perm-desc" role="cell">联网或有后果的操作</span>
-        <span class="perm-verdict warn" role="cell">每次都需显式确认</span>
+        <span class="perm-name" role="cell">联网 / 不可逆</span>
+        <span class="perm-desc" role="cell">联网或可能造成外部影响的操作</span>
+        <span class="perm-verdict warn" role="cell">每次都要明确确认</span>
       </div>
       <div class="perm-row perm-blocked" role="row">
         <span class="perm-level" role="cell">R4</span>
-        <span class="perm-name" role="cell">禁止</span>
-        <span class="perm-desc" role="cell"><code>sudo</code>、<code>git push</code>、读取密钥、越出工作区的写入</span>
-        <span class="perm-verdict no" role="cell">产品直接拒绝</span>
+        <span class="perm-name" role="cell">硬性禁止</span>
+        <span class="perm-desc" role="cell"><code>sudo</code>、<code>git push</code>、读取密钥、向工作区外写入</span>
+        <span class="perm-verdict no" role="cell">Charter 直接拒绝</span>
       </div>
     </div>
-    <p class="perm-note reveal">R4 没有“仍然运行”按钮。</p>
+    <p class="perm-note reveal">R4 没有“强制运行”这个选项。</p>
   </section>
 
   <!-- ============ SECURITY ============ -->
   <section class="security" id="security">
     <header class="section-head reveal">
-      <h2>模型永远碰不到你的文件</h2>
-      <p>模型回路运行在隔离进程中，没有文件系统、shell 或密钥访问权。
-      每个工具请求都要跨过同一个受审计的网关——校验格式、检查边界、
-      执行策略，并把证据记录在案。</p>
+      <h2>模型无法直接接触你的文件</h2>
+      <p>模型运行在独立进程中，无法访问文件系统、Shell 和密钥。
+      所有工具请求都会经过同一个可审计网关：校验参数、确认边界、
+      执行权限策略，并留下证据。</p>
     </header>
 
     <ul class="sec-grid">
       <li class="sec-card reveal spot">
-        <h3>用架构隔离</h3>
-        <p>界面、沙箱化桥接、桌面主进程与模型进程是彼此独立的信任边界。
-        工具执行发生在墙的主进程一侧，永远不在模型进程里。</p>
+        <h3>隔离写在架构里</h3>
+        <p>界面、沙箱桥接层、桌面主进程和模型进程各有独立的信任边界。
+        真正执行工具的是桌面主进程，模型进程从不直接执行工具。</p>
       </li>
       <li class="sec-card reveal spot">
-        <h3>默认可逆</h3>
-        <p>改动发生前先做快照，写入是原子的、带版本校验。
-        回滚按字节精确恢复，并逐一验证哈希。</p>
+        <h3>改动默认可回滚</h3>
+        <p>每次改动前都会创建快照；写入采用原子操作，并校验版本。
+        回滚可以逐字节恢复文件，还会逐个核对哈希。</p>
       </li>
       <li class="sec-card reveal spot">
         <h3>密钥待在钥匙串里</h3>
-        <p>Provider 凭据由操作系统级加密存储，永远不会进入界面——
-        界面只知道密钥<em>存在</em>。</p>
+        <p>Provider 密钥交给操作系统的加密存储保管，不会传到界面层；
+        界面只知道这把密钥是否<em>存在</em>。</p>
       </li>
       <li class="sec-card reveal spot">
-        <h3>诚实的本地优先</h3>
-        <p>项目、任务状态与证据都留在你的机器上。Prompt 和你附加的上下文
-        只发往你自己配置的模型端点——并遵循该 Provider 的数据政策。</p>
+        <h3>本地优先，去向说清</h3>
+        <p>项目、任务状态和证据都保存在本机。只有 Prompt 和你附加的上下文
+        会发往你配置的模型端点，并受对应 Provider 的数据政策约束。</p>
       </li>
     </ul>
 
-    <p class="sec-note reveal">应用层权限不等于操作系统级沙箱。批准前请审阅命令；
-    处理不受信任的仓库时请使用隔离环境。</p>
+    <p class="sec-note reveal">应用层权限不等于操作系统沙箱。批准命令前请仔细检查；
+    处理不可信仓库时，仍应使用隔离环境。</p>
   </section>
 
   <!-- ============ THE REST OF THE IDE ============ -->
   <section class="ide" id="ide">
     <header class="section-head reveal">
-      <h2>底下是一个完整的 IDE</h2>
-      <p>门是故事的主线——但日常工具一件不缺。
-      Charter 是一个能干活的 IDE，不是套着文件树的聊天窗口。</p>
+      <h2>门背后，是一个完整的 IDE</h2>
+      <p>四道关是 Charter 的核心，但日常工具一件没少——
+      这同样是一套能认真干活的 IDE，不是套着文件树的聊天窗口。</p>
     </header>
 
     <ul class="ide-grid ide-grid-featured">
@@ -358,48 +357,48 @@
         <figure><img src="/assets/features/notice.png" width="540" height="338" alt="右上角的完成通知：琥珀色状态条，“Ready for review——Harden checkout retries，3 个文件改动”，旁边是审查面板。"></figure>
         <div class="ide-card-body">
           <h3>完成通知</h3>
-          <p>任何 Session 结束时，一条带色的通知滑入——成功绿、待审琥珀、
-          失败红——对应的 Session 会在侧栏持续脉动，直到你打开它。</p>
+          <p>任何 Session 一结束，右上角就会滑入通知：成功为绿色、待审为琥珀色、
+          失败为红色。对应的 Session 会在侧栏持续闪动，直到你打开。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="/assets/features/presence.png" width="500" height="313" alt="运行中的实时面板：“THIS SESSION——LIVE”，每分钟 8 次写入，两个标着 writing 的文件卡片带活动条。"></figure>
         <div class="ide-card-body">
-          <h3>实时在场</h3>
-          <p>Agent 写入时文件卡片泛起涟漪，呼吸灯精确指出工作正发生在哪里——
-          就在它发生的那一刻。</p>
+          <h3>动静看得见</h3>
+          <p>Agent 正在写哪个文件，对应卡片就会显示动态效果；
+          呼吸灯让你一眼看出工作进行到哪里。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="/assets/features/terminal.png" width="860" height="538" alt="Charter 里真实的 zsh 终端在运行 npm test，带 PTY LIVE 徽章和通过的测试输出。"></figure>
         <div class="ide-card-body">
           <h3>真终端</h3>
-          <p>持久 PTY 加上能读懂命令的块模型——长命令跑完了会告诉你。
-          切换 Session 时 PTY 保持存活。</p>
+          <p>持久 PTY，每条命令按块展示，长任务结束时还会主动提醒。
+          切换 Session 后，PTY 仍会继续运行。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="/assets/features/replay.png" width="1440" height="900" alt="Session 回放：带请求、方法、决策、变更、结果节点的语义时间轴，可拖动的播放控制，以及记录在案的最终报告。"></figure>
+        <figure><img src="/assets/features/replay.png" width="1440" height="900" alt="Session 回放界面：语义时间轴包含请求、方法、决策、变更和结果节点，下方是可拖动的播放控件和保存下来的最终报告。"></figure>
         <div class="ide-card-body">
           <h3>Session 回放</h3>
-          <p>把结束的 Session 一步步拖着看，看每次改动如何落地——
-          只读，不碰你的 Worktree。</p>
+          <p>沿着时间轴回放已结束的 Session，看清每次改动如何落地。
+          全程只读，不会改动你的 Worktree。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="/assets/features/skills.png" width="690" height="431" alt="Composer 中用斜杠唤出技能选择器：三个受管技能带描述，以及选择与插入的键盘提示。"></figure>
+        <figure><img src="/assets/features/skills.png" width="690" height="431" alt="Composer 中用斜杠唤出技能选择器，三个统一管理的技能均带有说明，以及选择和插入的键盘提示。"></figure>
         <div class="ide-card-body">
           <h3>技能库</h3>
-          <p>为可复用的工作流准备的受管技能库，在 Composer 里
-          输入 <code>/</code> 直接唤出。</p>
+          <p>把可复用的工作流集中放进技能库，
+          在 Composer 中输入 <code>/</code> 即可调用。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="/assets/features/skins.png" width="1100" height="690" alt="同一个主界面在 Charter 的四套皮肤下：Studio、Terminal、Archive 与 Index。"></figure>
+        <figure><img src="/assets/features/skins.png" width="1100" height="690" alt="Charter 的同一个主界面分别使用 Studio、Terminal、Archive 和 Index 四套主题。"></figure>
         <div class="ide-card-body">
           <h3>随你调校</h3>
-          <p>四套联动皮肤、明暗双色、命令面板、快速启动器——
-          以及默认关闭的数据统计。</p>
+          <p>四套统一设计的主题，均支持浅色和深色；还有命令面板和快速启动器。
+          数据统计默认关闭。</p>
         </div>
       </li>
     </ul>
@@ -409,48 +408,48 @@
         <figure><img src="/assets/features/editor.png" width="1120" height="700" alt="Monaco 编辑器分成两栏，查找组件打开且匹配高亮，旁边是项目文件树。"></figure>
         <div class="ide-card-body">
           <h3>真正的编辑器</h3>
-          <p>Monaco：分屏、查找替换、大文件优雅降级。
-          Agent 在你身边编辑时，你的光标稳如泰山。</p>
+          <p>Monaco 支持分屏、查找替换，大文件也能稳妥处理。
+          Agent 在旁边改代码，也不会抢走你的光标。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="/assets/features/git.png" width="1120" height="700" alt="源代码管理面板：一个已暂存的改动、一个未跟踪文件、一条写好的提交信息，旁边是分屏编辑器。"></figure>
         <div class="ide-card-body">
           <h3>内置 Git</h3>
-          <p>状态、Diff、暂存、提交、分支。而 <code>git push</code>
-          永远不是 agent 的工具——这是设计。</p>
+          <p>状态、Diff、暂存、提交、分支，一应俱全。
+          按设计，Agent 永远不能运行 <code>git push</code>。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="/assets/features/search.png" width="1120" height="700" alt="按文件分组的全项目搜索结果，带匹配计数和包含/排除过滤器。"></figure>
         <div class="ide-card-body">
-          <h3>全项目搜索</h3>
-          <p>ripgrep 级速度的全仓搜索，替换在碰到任何文件之前
-          先给你预览。</p>
+          <h3>全仓搜索</h3>
+          <p>以 ripgrep 级的速度搜索整个仓库；执行批量替换前，
+          先让你预览所有改动。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="/assets/features/intelligence.png" width="1120" height="700" alt="编辑器中标出的 TypeScript 类型错误，同时列在问题面板：Type number is not assignable to type string。"></figure>
         <div class="ide-card-body">
           <h3>代码智能</h3>
-          <p>TypeScript 与 JavaScript 的完整语言支持，Python 基础支持——
-          agent 看到的诊断和你是同一份。</p>
+          <p>完整支持 TypeScript 和 JavaScript，另有 Python 基础功能；
+          你和 Agent 看到的是同一套诊断结果。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
-        <figure><img src="/assets/features/preview.png" width="1440" height="900" alt="审查的预览标签页：一个从任务隔离 Worktree 里服务的演示应用，画着选框和一条准备发给 agent 的反馈便签。"></figure>
+        <figure><img src="/assets/features/preview.png" width="1440" height="900" alt="审查界面的预览标签页展示了隔离 Worktree 中运行的演示应用；画面上有一个选框，以及一条准备发给 Agent 的反馈便签。"></figure>
         <div class="ide-card-body">
           <h3>实时预览</h3>
-          <p>看着应用在它的 Worktree 里运行、内嵌展示——然后直接在画面上
-          画框圈元素，把视觉反馈发给 agent。</p>
+          <p>直接在 IDE 中查看 Worktree 里的应用；还能在预览画面上
+          框选元素，把视觉反馈发给 Agent。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
         <figure><img src="/assets/features/steer.png" width="896" height="600" alt="运行中的 Session，Composer 里已输入转向指令：“Skip the second note——verify what is there now.”"></figure>
         <div class="ide-card-body">
-          <h3>飞行中转向</h3>
-          <p>给运行中的 agent 改方向、排后续任务，或者立即停止——
-          而且停止永远不会被粉饰成成功。</p>
+          <h3>跑着也能转向</h3>
+          <p>Agent 跑到一半，照样能改方向、追加指令，或者一键叫停——
+          而且停下就是停下，绝不粉饰成“成功”。</p>
         </div>
       </li>
     </ul>
@@ -460,8 +459,8 @@
   <section class="start" id="start">
     <header class="section-head reveal">
       <h2>今天就从源码构建</h2>
-      <p>Charter 是开发预览版：桌面工作流已实现并通过测试，
-      安装包、签名与自动更新仍在进行中。从源码构建是当前受支持的使用方式。</p>
+      <p>Charter 仍处于开发预览阶段：核心桌面工作流已经可用并通过测试，
+      安装包、签名和自动更新仍在开发中。目前仅支持从源码构建。</p>
     </header>
 
     <div class="terminal reveal" aria-label="安装命令">
@@ -474,55 +473,55 @@
     </div>
 
     <ol class="start-steps reveal">
-      <li><strong>打开一个 Git 项目。</strong>Charter 面向真实仓库工作，在隔离的 Worktree 里进行。</li>
-      <li><strong>添加模型 Provider。</strong>设置 → Models：Anthropic、OpenAI、OpenRouter、LiteLLM 或任意兼容端点。密钥存进系统钥匙串。</li>
-      <li><strong>创建一个 Session。</strong>选择 agent 与权限模式，描述你想要的结果——等它进入待审查时，读证据说话。</li>
+      <li><strong>打开一个 Git 项目。</strong>Charter 直接处理真实仓库，并把每个任务放进隔离的 Worktree。</li>
+      <li><strong>添加模型 Provider。</strong>前往设置 → Models，选择 Anthropic、OpenAI、OpenRouter、LiteLLM 或任意兼容端点。密钥会保存在系统钥匙串中。</li>
+      <li><strong>创建一个 Session。</strong>选择 Agent 和权限模式，说明你想要的结果；任务进入待审查后，再根据证据验收。</li>
     </ol>
 
     <p class="start-note reveal" data-release-note>
-      想要安装包？<a href="https://github.com/longyunfeigu/Charter/releases" rel="noopener">在 GitHub 关注 Releases</a>——打包发布正是当前里程碑。
+      想等安装包？可以<a href="https://github.com/longyunfeigu/Charter/releases" rel="noopener">关注 GitHub Releases</a>；我们正在推进打包发布。
     </p>
   </section>
 
   <!-- ============ FAQ ============ -->
   <section class="faq" id="faq">
-    <h2 class="reveal">问题，直说直答</h2>
+    <h2 class="reveal">你大概会想问的</h2>
     <div class="faq-list">
       <details class="reveal">
         <summary>为什么还没有安装包？</summary>
-        <p>刻意的排序。让 Charter 值得一用的那部分——隔离改动、证据、验证、审查、回滚——
-        先做完并打磨扎实；打包、签名和更新通道是正在进行的里程碑。今天最诚实的
-        提供方式就是 <code>git clone</code>，所以这个页面上写的就是它。</p>
+        <p>这是刻意安排的先后顺序。我们先把 Charter 的核心流程——隔离改动、证据、
+        验证、审查和回滚——做完整、打磨稳定，再处理打包、签名和更新通道。
+        目前想用 Charter，最直接的办法就是 <code>git clone</code>，所以这里只提供源码构建步骤。</p>
       </details>
       <details class="reveal">
-        <summary>我的代码会去哪里？</summary>
-        <p>默认哪儿也不去。项目、任务状态和证据账本都在你的机器上。Agent 运行时，
-        你的 prompt 和附加的上下文只发往<em>你自己</em>配置的模型端点——中间没有别的后端，
-        数据统计也默认关闭。</p>
+        <summary>我的代码会被传到哪里？</summary>
+        <p>项目、任务状态和证据账本默认只留在本机。运行 Agent 时，
+        只有 Prompt 和你附加的上下文会发往<em>你自己</em>配置的模型端点，
+        不会经过其他后端；数据统计也默认关闭。</p>
       </details>
       <details class="reveal">
-        <summary>能用哪些模型和 agent？</summary>
-        <p>内置的 Charter Agent 支持 Anthropic、OpenAI、OpenRouter、LiteLLM 预设，
-        以及自定义的 Anthropic 或 OpenAI 兼容端点。已安装的 Claude Code 和 Codex CLI
-        则原生运行在同一套 Session 与审查模型中。</p>
+        <summary>能用哪些模型和 Agent？</summary>
+        <p>内置 Charter Agent 支持 Anthropic、OpenAI、OpenRouter、LiteLLM 预设，
+        也支持自定义 Anthropic 或 OpenAI 兼容端点。已经安装的 Claude Code 和 Codex CLI
+        也能原生接入，沿用同一套 Session 和审查流程。</p>
       </details>
       <details class="reveal">
         <summary>和 AI-first IDE 有什么不同？</summary>
-        <p>Charter 不和你的 agent 竞争——它和你 agent 蜗居的那个终端窗口竞争。
-        AI-first IDE 内置它们自家的 agent；Charter 则把你已经在用的 agent 包进
-        隔离 Worktree、记录账本、可重跑的验证、默认人工批准的审查门，
-        以及接受之后依然有效的回滚。</p>
+        <p>Charter 不想替换你喜欢的 Agent，而是要替换承载它的那个终端窗口。
+        AI-first IDE 往往绑定自家的 Agent；Charter 则为你已经在用的 Agent 补上
+        隔离 Worktree、完整记录、可重跑的验证、默认人工批准的审查关卡，
+        以及接受后依然可用的回滚。</p>
       </details>
       <details class="reveal">
         <summary>真的开源吗？</summary>
-        <p>MIT 协议，公开开发——包括产品规格说明、架构决策记录和实现状态。
-        如果这个页面上有任何说法在仓库里找不到依据，欢迎提 issue。</p>
+        <p>Charter 采用 MIT 许可，并全程公开开发，包括产品规格、
+        架构决策记录和实现状态。如果页面上的任何说法在仓库里找不到依据，欢迎提 Issue。</p>
       </details>
       <details class="reveal">
         <summary>Charter 是谁在开发？</summary>
-        <p>主要是 coding agent——就按这个页面描述的方式工作：对着公开的规格说明，
-        每次改动都有计划、验证与审查。这些门之所以存在，正是因为 Charter 自己的
-        开发就依赖它们。</p>
+        <p>Charter 的大部分开发工作由编程 Agent 完成，并且正是按这个页面描述的方式工作：
+        每次改动都对照公开规格，经过计划、验证和审查。这些关卡之所以存在，
+        正是因为 Charter 自身的开发也依赖它们。</p>
       </details>
     </div>
   </section>
@@ -530,7 +529,7 @@
   <!-- ============ FINAL CTA ============ -->
   <section class="outro">
     <h2 class="reveal">Charter your agent.</h2>
-    <p class="reveal">给工作立一份章程——目标、边界、证据——最终决定权在你。</p>
+    <p class="reveal">给每次委托立一份章程：目标、边界、证据——最后拍板的，是你。</p>
     <div class="hero-cta reveal">
       <a class="btn btn-primary" href="#start">开始使用</a>
       <a class="btn btn-ghost" href="https://github.com/longyunfeigu/Charter" rel="noopener">查看 GitHub</a>
@@ -543,7 +542,7 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <span class="wordmark">Charter</span>
-      <p>看得见的 agent 工作，从 prompt 到 proof。</p>
+      <p>从 Prompt 到 Proof，看清 Agent 的每一步。</p>
     </div>
     <nav class="footer-links" aria-label="页脚导航">
       <div>
@@ -569,7 +568,7 @@
       </div>
     </nav>
   </div>
-  <p class="footer-fine">© 2026 Charter contributors。献给会认真读 diff 的人。</p>
+  <p class="footer-fine">© 2026 Charter contributors。写给每一个认真看 Diff 的人。</p>
 </footer>
 
 <script src="/script.js" defer></script>
