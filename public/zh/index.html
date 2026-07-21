@@ -333,14 +333,18 @@
       <li class="sec-card reveal spot">
         <h3>密钥待在钥匙串里</h3>
         <p>Provider 密钥交给操作系统的加密存储保管，不会传到界面层；
-        界面只知道这把密钥是否<em>存在</em>。</p>
+        界面只能看到这把密钥是否<em>存在</em>，外加一个掩码提示。</p>
       </li>
       <li class="sec-card reveal spot">
         <h3>本地优先，去向说清</h3>
-        <p>项目、任务状态和证据都保存在本机。只有 Prompt 和你附加的上下文
-        会发往你配置的模型端点，并受对应 Provider 的数据政策约束。</p>
+        <p>项目、任务状态和证据都保存在本机。Prompt 和你附加的上下文
+        只会发往你配置的模型端点，并受对应 Provider 的数据政策约束。</p>
       </li>
     </ul>
+
+    <p class="sec-note reveal">权限分级和本节描述的是内置 Charter Agent 的执行路径。
+    Claude Code / Codex 外部会话在终端里自行执行工具——Charter 以入场快照、
+    完整的改动记账、同样的逐字节回滚和审查关卡为其兜底。</p>
 
     <p class="sec-note reveal">应用层权限不等于操作系统沙箱。批准命令前请仔细检查；
     处理不可信仓库时，仍应使用隔离环境。</p>

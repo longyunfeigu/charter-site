@@ -336,7 +336,7 @@
       <li class="sec-card reveal spot">
         <h3>Keys stay in the keychain</h3>
         <p>Provider credentials are encrypted with OS-backed storage and never reach the
-        interface — it only ever learns that a key <em>exists</em>.</p>
+        interface — it only ever sees that a key <em>exists</em>, plus a masked hint.</p>
       </li>
       <li class="sec-card reveal spot">
         <h3>Local-first, honestly</h3>
@@ -344,6 +344,11 @@
         go only to the model endpoint you configure — and that provider’s policy applies there.</p>
       </li>
     </ul>
+
+    <p class="sec-note reveal">The permission ladder and this section describe the managed
+    Charter Agent. External Claude Code and Codex sessions execute tools themselves, in your
+    terminal — Charter wraps them in an entry snapshot, full change accounting, the same
+    byte-exact rollback, and the same review gate instead.</p>
 
     <p class="sec-note reveal">Application-level permissions are not an operating-system sandbox.
     Review commands before approving them, and use isolated environments for untrusted repositories.</p>

@@ -912,6 +912,10 @@ html:not(.js) .stage-frame img:last-of-type { opacity: 1; }
   color: var(--fg-faint);
 }
 
+.sec-note + .sec-note {
+  margin-top: 10px;
+}
+
 /* ---------- the rest of the IDE ---------- */
 
 .ide {
