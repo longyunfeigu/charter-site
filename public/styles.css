@@ -87,6 +87,8 @@ h1, h2, h3, .wordmark {
   text-wrap: balance;
 }
 
+.nobr { white-space: nowrap; }
+
 p { margin: 0; }
 
 a { color: inherit; }
@@ -910,10 +912,6 @@ html:not(.js) .stage-frame img:last-of-type { opacity: 1; }
   text-align: center;
   font-size: 13.5px;
   color: var(--fg-faint);
-}
-
-.sec-note + .sec-note {
-  margin-top: 10px;
 }
 
 /* ---------- the rest of the IDE ---------- */

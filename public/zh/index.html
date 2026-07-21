@@ -313,10 +313,10 @@
   <!-- ============ SECURITY ============ -->
   <section class="security" id="security">
     <header class="section-head reveal">
-      <h2>模型无法直接接触你的文件</h2>
-      <p>模型运行在独立进程中，无法访问文件系统、Shell 和密钥。
-      所有工具请求都会经过同一个可审计网关：校验参数、确认边界、
-      执行权限策略，并留下证据。</p>
+      <h2><span class="nobr">信任交给架构，</span><span class="nobr">不交给模型</span></h2>
+      <p>内置 Charter Agent 的模型运行在独立进程中，无法访问文件系统、Shell 和密钥，
+      所有工具请求都经过同一个可审计网关。Claude Code / Codex 由 CLI
+      自行执行工具，Charter 为它们留好入场快照、改动账本和逐字节回滚。</p>
     </header>
 
     <ul class="sec-grid">
@@ -341,10 +341,6 @@
         只会发往你配置的模型端点，并受对应 Provider 的数据政策约束。</p>
       </li>
     </ul>
-
-    <p class="sec-note reveal">权限分级和本节描述的是内置 Charter Agent 的执行路径。
-    Claude Code / Codex 外部会话在终端里自行执行工具——Charter 以入场快照、
-    完整的改动记账、同样的逐字节回滚和审查关卡为其兜底。</p>
 
     <p class="sec-note reveal">应用层权限不等于操作系统沙箱。批准命令前请仔细检查；
     处理不可信仓库时，仍应使用隔离环境。</p>
