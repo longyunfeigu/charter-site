@@ -9,7 +9,7 @@ Static marketing site for Charter (https://github.com/longyunfeigu/Charter). No 
 - The product name is **Charter**. Tagline: "Observable agent work, from prompt to proof."
 - Never mention the internal engine name, internal package names/scopes, internal environment-variable prefixes, or internal milestone codes in anything under `public/`. The authoritative deny list lives in the product repo — see its `CLAUDE.md` and `docs/adr/` (the shell-branding ADR). When in doubt: describe capabilities, never internals.
 - External agent products (Claude Code, Codex) may be named — they are supported backends.
-- Never overstate product status: Charter is a **development preview**. No installers exist yet; "build from source" is the only supported install path. No fake download buttons, no invented metrics, no fabricated testimonials or logos.
+- Never overstate product status: Charter is a **development preview**. Unsigned beta installers (macOS Apple Silicon, Windows x64, Linux preview tarball) are published as GitHub prereleases since v1.0.0-beta.2 — always keep the "unsigned / not notarized / verify SHA256SUMS" caveat next to any download mention. No signed or notarized builds exist. No invented metrics, no fabricated testimonials or logos.
 - Every capability claim on the site must be true of the current product (see the product repo's README.md and docs/IMPLEMENTATION_STATUS.md).
 
 ## Structure
