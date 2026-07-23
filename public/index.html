@@ -30,6 +30,7 @@
     <nav class="nav-links" aria-label="Site">
       <a href="#why">Why</a>
       <a href="#tour">Tour</a>
+      <a href="#fleet">Fleet</a>
       <a href="#gates">Gates</a>
       <a href="#security">Security</a>
       <a href="#ide">IDE</a>
@@ -97,9 +98,11 @@
       <span>four gates</span><i>·</i>
       <span>byte-exact rollback</span><i>·</i>
       <span>isolated worktrees</span><i>·</i>
+      <span>visible worker fleets</span><i>·</i>
       <span>ready-to-review, never auto-accept</span><i>·</i>
       <span>recorded verification</span><i>·</i>
       <span>session replay</span><i>·</i>
+      <span>session archaeology</span><i>·</i>
       <span>project memory</span><i>·</i>
       <span>local-first</span><i>·</i>
       <span>R0–R4 permissions</span><i>·</i>
@@ -110,9 +113,11 @@
       <span>four gates</span><i>·</i>
       <span>byte-exact rollback</span><i>·</i>
       <span>isolated worktrees</span><i>·</i>
+      <span>visible worker fleets</span><i>·</i>
       <span>ready-to-review, never auto-accept</span><i>·</i>
       <span>recorded verification</span><i>·</i>
       <span>session replay</span><i>·</i>
+      <span>session archaeology</span><i>·</i>
       <span>project memory</span><i>·</i>
       <span>local-first</span><i>·</i>
       <span>R0–R4 permissions</span><i>·</i>
@@ -152,7 +157,7 @@
       </li>
     </ul>
 
-    <div class="equation reveal" role="img" aria-label="A Session equals project plus agent plus worktree plus conversation plus plan plus files plus terminals plus preview plus verification plus review.">
+    <div class="equation reveal" role="img" aria-label="A Session equals project plus agent plus worktree plus conversation plus plan plus files plus terminals plus workers plus preview plus verification plus review.">
       <span class="eq-lhs">Session</span>
       <span class="eq-op">=</span>
       <span class="eq-term">project</span><span class="eq-op">+</span>
@@ -162,6 +167,7 @@
       <span class="eq-term">plan</span><span class="eq-op">+</span>
       <span class="eq-term">files</span><span class="eq-op">+</span>
       <span class="eq-term">terminals</span><span class="eq-op">+</span>
+      <span class="eq-term">workers</span><span class="eq-op">+</span>
       <span class="eq-term">preview</span><span class="eq-op">+</span>
       <span class="eq-term">verification</span><span class="eq-op">+</span>
       <span class="eq-term hl">review</span>
@@ -229,6 +235,64 @@
       </figure>
     </article>
 
+  </section>
+
+  <!-- ============ FLEET ============ -->
+  <section class="fleet" id="fleet">
+    <header class="section-head reveal">
+      <h2>Agents directing agents — in plain sight</h2>
+      <p>When one pair of hands isn’t enough, a Session can spawn shell,
+      <strong>Claude Code</strong>, and <strong>Codex</strong> workers and conduct them
+      from one Room — a visible fleet, not a pile of invisible background jobs.</p>
+    </header>
+
+    <figure class="fleet-wall reveal">
+      <div class="fleet-frame" role="img" aria-label="A stylized fleet monitor: one conducting Session with Pause all and Take over controls above three workers — a Claude Code worker working, a Codex worker waiting for approval, and a shell worker done.">
+        <div class="fleet-director">
+          <span class="fleet-chip">Session · conductor</span>
+          <p>“Split the failing suites across three workers — fix, then report back green.”</p>
+          <div class="fleet-controls"><span>Pause all</span><span>Take over</span></div>
+        </div>
+        <div class="fleet-workers">
+          <div class="fleet-tile">
+            <header><span class="fleet-kind">Worker · Claude Code</span><span class="fleet-state run">working</span></header>
+            <div class="fleet-lines"><i style="--w:88%"></i><i style="--w:64%"></i><i style="--w:76%"></i></div>
+          </div>
+          <div class="fleet-tile">
+            <header><span class="fleet-kind">Worker · Codex</span><span class="fleet-state ask">needs approval</span></header>
+            <div class="fleet-lines"><i style="--w:72%"></i><i style="--w:81%"></i><i style="--w:38%"></i></div>
+          </div>
+          <div class="fleet-tile">
+            <header><span class="fleet-kind">Worker · shell</span><span class="fleet-state done">done</span></header>
+            <div class="fleet-lines"><i style="--w:66%"></i><i style="--w:44%"></i><i style="--w:58%"></i></div>
+          </div>
+        </div>
+      </div>
+      <figcaption>A stylized sketch, not a screenshot: one Session conducting three workers.</figcaption>
+    </figure>
+
+    <ul class="sec-grid">
+      <li class="sec-card reveal spot">
+        <h3>Every worker on the wall</h3>
+        <p>Spawned workers land on a live monitor with their current output, state, and
+        lineage. Each one stays attributable — you always know which Session created it.</p>
+      </li>
+      <li class="sec-card reveal spot">
+        <h3>Approvals don’t scatter</h3>
+        <p>Permission requests from the fleet surface together, beside the conversation
+        that caused them — one place to say yes or no, instead of hunting across terminals.</p>
+      </li>
+      <li class="sec-card reveal spot">
+        <h3>Pause all, or take over one</h3>
+        <p>Freeze the whole formation, pause a single worker, or take over its keyboard
+        mid-run — then hand control back and let it continue.</p>
+      </li>
+      <li class="sec-card reveal spot">
+        <h3>Workers stay open for follow-up</h3>
+        <p>When the run ends, worker sessions remain on the wall — inspectable and ready
+        for a follow-up, with every control action left on the record.</p>
+      </li>
+    </ul>
   </section>
 
   <!-- ============ GATES ============ -->
@@ -396,7 +460,8 @@
         <div class="ide-card-body">
           <h3>Skills</h3>
           <p>A managed skill library for repeatable workflows, summoned with
-          <code>/</code> right in the composer.</p>
+          <code>/</code> right in the composer — with usage insight that shows which
+          skills earn their keep, split by Charter and Claude Code.</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
@@ -459,15 +524,39 @@
         </div>
       </li>
     </ul>
+
+    <ul class="ide-grid ide-grid-mini">
+      <li class="ide-card reveal spot">
+        <h3>Session archaeology</h3>
+        <p>Charter discovers the Claude Code and Codex sessions you ran outside it —
+        read-only, organized by day — and can adopt one into a Session to resume.</p>
+      </li>
+      <li class="ide-card reveal spot">
+        <h3>Screenshot express</h3>
+        <p>On supported macOS setups, a fresh screenshot or clipboard capture pops a
+        quick card: feed it to the running agent, annotate it first, or file it into
+        project assets.</p>
+      </li>
+      <li class="ide-card reveal spot">
+        <h3>Clickable terminal output</h3>
+        <p>⌘-click a path in any terminal to open the file at that line in Charter —
+        or a local HTML page in your default browser.</p>
+      </li>
+      <li class="ide-card reveal spot">
+        <h3>Four coordinated skins</h3>
+        <p>Studio, Terminal, Archive, and Index change the whole interface language —
+        editor and PTY included — not just an accent color.</p>
+      </li>
+    </ul>
   </section>
 
   <!-- ============ GET STARTED ============ -->
   <section class="start" id="start">
     <header class="section-head reveal">
-      <h2>Build it from source today</h2>
-      <p>Charter is a development preview: the desktop workflow is implemented and tested,
-      while installers, signing, and auto-update are still in progress. Building from source
-      is the supported way in.</p>
+      <h2>Run it today</h2>
+      <p>Charter is a development preview: the desktop workflow is implemented and tested.
+      Download the unsigned beta, or build from source in about two minutes — signing,
+      notarization, and auto-update are still in progress.</p>
     </header>
 
     <div class="terminal reveal" aria-label="Installation commands">
@@ -495,11 +584,13 @@
     <h2 class="reveal">Questions, answered plainly</h2>
     <div class="faq-list">
       <details class="reveal">
-        <summary>Why is there no installer yet?</summary>
+        <summary>Why are the downloads unsigned?</summary>
         <p>Deliberate sequencing. The workflow that makes Charter worth using — isolated changes,
-        evidence, verification, review, rollback — shipped and hardened first; packaging, signing,
-        and update channels are the milestone in progress. The honest way to offer the product today
-        is <code>git clone</code>, so that’s the one on this page.</p>
+        evidence, verification, review, rollback — shipped and hardened first; code signing,
+        notarization, and auto-update are the milestone in progress. Until then the beta ships
+        unsigned, so your operating system may warn before first launch. Every release publishes
+        <code>SHA256SUMS.txt</code>, an SBOM, and a manifest — verify what you download, or build
+        from source if unsigned apps aren’t allowed on your machine.</p>
       </details>
       <details class="reveal">
         <summary>Where does my code go?</summary>

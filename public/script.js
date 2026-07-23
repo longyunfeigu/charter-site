@@ -135,21 +135,24 @@
       .catch(() => { /* offline or rate-limited — keep it hidden */ });
   }
 
-  /* ---- releases lookup: upgrade the note once installers exist ---- */
+  /* ---- releases lookup: point the download link at the current tag ----
+     Only the link is updated; the static unsigned/verify-checksums caveat
+     around it must always stay (brand rule). */
   const note = document.querySelector('[data-release-note]');
   if (note && 'fetch' in window) {
     /* releases list (not /latest) so an empty repo answers 200 [] instead of 404 */
     fetch(`https://api.github.com/repos/${REPO}/releases?per_page=1`, { headers: { Accept: 'application/vnd.github+json' } })
       .then((r) => (r.ok ? r.json() : null))
       .then((list) => {
-        const rel = Array.isArray(list) ? list.find((x) => !x.draft && !x.prerelease) || list[0] : null;
-        if (rel && rel.tag_name && Array.isArray(rel.assets) && rel.assets.length > 0) {
-          const url = rel.html_url;
-          note.innerHTML = document.documentElement.lang.startsWith('zh')
-            ? `想直接安装？可以从 GitHub Releases <a href="${url}" rel="noopener">下载 ${rel.tag_name}</a>，也可以按上方步骤从源码构建。`
-            : `Prefer an installer? <a href="${url}" rel="noopener">Download ${rel.tag_name}</a> from GitHub Releases — or build from source above.`;
+        const rel = Array.isArray(list) ? list.find((x) => !x.draft) || list[0] : null;
+        const link = note.querySelector('a');
+        if (link && rel && rel.tag_name && Array.isArray(rel.assets) && rel.assets.length > 0) {
+          link.href = rel.html_url;
+          link.textContent = document.documentElement.lang.startsWith('zh')
+            ? `从 GitHub Releases 下载未签名 Beta（${rel.tag_name}）`
+            : `Download the unsigned beta (${rel.tag_name}) from GitHub Releases`;
         }
       })
-      .catch(() => { /* no releases yet — the build-from-source note stands */ });
+      .catch(() => { /* offline or rate-limited — the static note stands */ });
   }
 })();

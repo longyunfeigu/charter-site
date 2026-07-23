@@ -31,6 +31,7 @@
     <nav class="nav-links" aria-label="站点导航">
       <a href="#why">理念</a>
       <a href="#tour">导览</a>
+      <a href="#fleet">编队</a>
       <a href="#gates">四道关</a>
       <a href="#security">安全</a>
       <a href="#ide">IDE</a>
@@ -97,9 +98,11 @@
       <span>四道关</span><i>·</i>
       <span>字节级回滚</span><i>·</i>
       <span>隔离 Worktree</span><i>·</i>
+      <span>可见的 Worker 编队</span><i>·</i>
       <span>完成即待审，永不自动接受</span><i>·</i>
       <span>验证全程留痕</span><i>·</i>
       <span>Session 回放</span><i>·</i>
+      <span>会话考古</span><i>·</i>
       <span>项目 Memory</span><i>·</i>
       <span>本地优先</span><i>·</i>
       <span>R0–R4 权限</span><i>·</i>
@@ -110,9 +113,11 @@
       <span>四道关</span><i>·</i>
       <span>字节级回滚</span><i>·</i>
       <span>隔离 Worktree</span><i>·</i>
+      <span>可见的 Worker 编队</span><i>·</i>
       <span>完成即待审，永不自动接受</span><i>·</i>
       <span>验证全程留痕</span><i>·</i>
       <span>Session 回放</span><i>·</i>
+      <span>会话考古</span><i>·</i>
       <span>项目 Memory</span><i>·</i>
       <span>本地优先</span><i>·</i>
       <span>R0–R4 权限</span><i>·</i>
@@ -151,7 +156,7 @@
       </li>
     </ul>
 
-    <div class="equation reveal" role="img" aria-label="一个 Session 包含项目、Agent、Worktree、对话、计划、文件、终端、预览、验证和审查。">
+    <div class="equation reveal" role="img" aria-label="一个 Session 包含项目、Agent、Worktree、对话、计划、文件、终端、Worker、预览、验证和审查。">
       <span class="eq-lhs">Session</span>
       <span class="eq-op">=</span>
       <span class="eq-term">project</span><span class="eq-op">+</span>
@@ -161,6 +166,7 @@
       <span class="eq-term">plan</span><span class="eq-op">+</span>
       <span class="eq-term">files</span><span class="eq-op">+</span>
       <span class="eq-term">terminals</span><span class="eq-op">+</span>
+      <span class="eq-term">workers</span><span class="eq-op">+</span>
       <span class="eq-term">preview</span><span class="eq-op">+</span>
       <span class="eq-term">verification</span><span class="eq-op">+</span>
       <span class="eq-term hl">review</span>
@@ -227,6 +233,64 @@
       </figure>
     </article>
 
+  </section>
+
+  <!-- ============ FLEET ============ -->
+  <section class="fleet" id="fleet">
+    <header class="section-head reveal">
+      <h2>Agent 指挥 Agent，全程在台面上</h2>
+      <p>一双手不够用的时候，一个 Session 可以创建 shell、<strong>Claude Code</strong> 和
+      <strong>Codex</strong> Worker，并在同一个 Room 里指挥它们——
+      这是一支看得见的编队，不是一堆藏起来的后台任务。</p>
+    </header>
+
+    <figure class="fleet-wall reveal">
+      <div class="fleet-frame" role="img" aria-label="编队监看墙的示意图：上方是发出指令的 Session，带 Pause all 和接管两个控制；下方三个 Worker——Claude Code 正在工作，Codex 等待审批，shell 已完成。">
+        <div class="fleet-director">
+          <span class="fleet-chip">Session · 指挥</span>
+          <p>“把失败的测试套件分给三个 Worker，各自修完、跑绿再汇报。”</p>
+          <div class="fleet-controls"><span>Pause all</span><span>接管</span></div>
+        </div>
+        <div class="fleet-workers">
+          <div class="fleet-tile">
+            <header><span class="fleet-kind">Worker · Claude Code</span><span class="fleet-state run">工作中</span></header>
+            <div class="fleet-lines"><i style="--w:88%"></i><i style="--w:64%"></i><i style="--w:76%"></i></div>
+          </div>
+          <div class="fleet-tile">
+            <header><span class="fleet-kind">Worker · Codex</span><span class="fleet-state ask">待审批</span></header>
+            <div class="fleet-lines"><i style="--w:72%"></i><i style="--w:81%"></i><i style="--w:38%"></i></div>
+          </div>
+          <div class="fleet-tile">
+            <header><span class="fleet-kind">Worker · shell</span><span class="fleet-state done">已完成</span></header>
+            <div class="fleet-lines"><i style="--w:66%"></i><i style="--w:44%"></i><i style="--w:58%"></i></div>
+          </div>
+        </div>
+      </div>
+      <figcaption>示意草图，并非产品截图：一个 Session 正在指挥三个 Worker。</figcaption>
+    </figure>
+
+    <ul class="sec-grid">
+      <li class="sec-card reveal spot">
+        <h3>每个 Worker 都在墙上</h3>
+        <p>新建的 Worker 会出现在实时监看墙上：当前输出、状态、来龙去脉一目了然。
+        每个 Worker 都有明确归属——是哪个 Session 建的，随时说得清。</p>
+      </li>
+      <li class="sec-card reveal spot">
+        <h3>审批不会四处散落</h3>
+        <p>编队里的权限请求会集中浮出，就在引发它们的对话旁边——
+        在一个地方点头或摇头，不用挨个终端去找。</p>
+      </li>
+      <li class="sec-card reveal spot">
+        <h3>一键全停，或接管一个</h3>
+        <p>可以整队暂停，也可以只停某个 Worker，甚至在运行中接管它的键盘——
+        处理完交还控制，让它继续干。</p>
+      </li>
+      <li class="sec-card reveal spot">
+        <h3>Worker 留着，随时追问</h3>
+        <p>任务结束后，Worker 会话仍留在墙上，可以查看、可以继续追问；
+        每一次控制动作都记录在案。</p>
+      </li>
+    </ul>
   </section>
 
   <!-- ============ GATES ============ -->
@@ -391,8 +455,8 @@
         <figure><img src="/assets/features/skills.png" width="690" height="431" alt="Composer 中用斜杠唤出技能选择器，三个统一管理的技能均带有说明，以及选择和插入的键盘提示。"></figure>
         <div class="ide-card-body">
           <h3>技能库</h3>
-          <p>把可复用的工作流集中放进技能库，
-          在 Composer 中输入 <code>/</code> 即可调用。</p>
+          <p>把可复用的工作流集中放进技能库，在 Composer 中输入 <code>/</code> 即可调用。
+          用量透视会告诉你哪些技能真正在干活——Charter 和 Claude Code 分开统计。</p>
         </div>
       </li>
       <li class="ide-card ide-card-shot reveal spot">
@@ -455,14 +519,38 @@
         </div>
       </li>
     </ul>
+
+    <ul class="ide-grid ide-grid-mini">
+      <li class="ide-card reveal spot">
+        <h3>会话考古</h3>
+        <p>Charter 会只读发现你在它之外跑过的 Claude Code / Codex 会话，按日期整理；
+        看中哪条，就收编进 Session 继续干。</p>
+      </li>
+      <li class="ide-card reveal spot">
+        <h3>截图直通车</h3>
+        <p>在 macOS 上，新截图或剪贴板截图会弹出快捷卡片：直接喂给正在运行的 Agent、
+        先标注再发，或存入项目素材。</p>
+      </li>
+      <li class="ide-card reveal spot">
+        <h3>终端输出可以点</h3>
+        <p>在任意终端里 ⌘-点击路径，即可在 Charter 中按行号打开文件；
+        本地 HTML 页面则直接在默认浏览器中打开。</p>
+      </li>
+      <li class="ide-card reveal spot">
+        <h3>四套成套皮肤</h3>
+        <p>Studio、Terminal、Archive、Index 四套皮肤整体换装——
+        连编辑器和终端一起换，而不是只换一个强调色。</p>
+      </li>
+    </ul>
   </section>
 
   <!-- ============ GET STARTED ============ -->
   <section class="start" id="start">
     <header class="section-head reveal">
-      <h2>今天就从源码构建</h2>
-      <p>Charter 仍处于开发预览阶段：核心桌面工作流已经可用并通过测试，
-      安装包、签名和自动更新仍在开发中。目前仅支持从源码构建。</p>
+      <h2>今天就跑起来</h2>
+      <p>Charter 仍处于开发预览阶段：核心桌面工作流已经可用并通过测试。
+      可以直接下载未签名 Beta，也可以约两分钟从源码启动——
+      签名、公证和自动更新仍在开发中。</p>
     </header>
 
     <div class="terminal reveal" aria-label="安装命令">
@@ -490,10 +578,12 @@
     <h2 class="reveal">你大概会想问的</h2>
     <div class="faq-list">
       <details class="reveal">
-        <summary>为什么还没有安装包？</summary>
+        <summary>为什么安装包没有签名？</summary>
         <p>这是刻意安排的先后顺序。我们先把 Charter 的核心流程——隔离改动、证据、
-        验证、审查和回滚——做完整、打磨稳定，再处理打包、签名和更新通道。
-        目前想用 Charter，最直接的办法就是 <code>git clone</code>，所以这里只提供源码构建步骤。</p>
+        验证、审查和回滚——做完整、打磨稳定；代码签名、公证和自动更新是正在进行的里程碑。
+        在那之前，Beta 以未签名形式发布，系统首次启动前可能弹出警告。每个 Release 都附带
+        <code>SHA256SUMS.txt</code>、SBOM 和发布清单——下载后请先校验；
+        如果你的机器不允许运行未签名应用，也可以从源码构建。</p>
       </details>
       <details class="reveal">
         <summary>我的代码会被传到哪里？</summary>
